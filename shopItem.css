@@ -1,0 +1,153 @@
+.common
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+#Sam_alert_popup_message
+{
+    display: block;
+    background-color: rgba(253, 194, 0, 0.925);
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+#sam_alert_line
+{
+    width: 72%;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+#sam_c19_alert
+{
+    color: red;
+}
+#sam_X
+{
+    margin-top:7px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+#Sam_body
+{
+    width: 80%;
+    margin: auto;
+}
+#Sam_div1_links
+{
+    display: flex;
+}
+#Sam_home_link
+{
+    padding-left: 30px;
+    color: darkgrey;
+}
+hr{
+    background-color: rgb(192, 189, 189);
+}
+#Sam_Display_nd_details
+{
+    display: flex;
+}
+#Sam_image_display
+{
+    width: 50%;
+    margin-top: 30px;
+    background-color: wheat;
+    margin-right: 3%;
+    height: 750px;
+}
+#Sam_details_display
+{
+    width: 57%;
+    background-color: transparent;
+    height: 600px;
+}
+#Sam_details_display>h1
+{
+    line-height: 42px;
+    margin-left: 5px;
+    font-size: 40px;
+    font-weight: 450;
+}
+#sam_product_spec
+{
+    display: flex;
+}
+#sam_rating_add>img
+{
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+#sam_rating_add:hover{
+    color: red;
+    cursor: pointer;
+}
+#sam_delivery_report
+{
+    display: flex;
+    color: darkgrey
+}
+#sam_delivery_report>img
+{
+    width:20px;
+    height: 15px;
+    margin-right:4px;
+    font-weight: 400px;
+    
+    /* border-radius: 10px; */
+}
+#sam_related_to_del
+{
+    margin-top: 40px;
+    display: flex;
+    font-weight: 400;
+    
+}
+#sam_delevery_check
+{
+    display: flex;
+    margin-left: 30px;
+    color: red;
+}
+#sam_delevery_check:hover
+{
+    cursor: pointer;
+}
+#sam_delevery_check>img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;   
+}
+#sam_delievry_pincode_check
+{
+    display: none;
+}
+#sam_input_pincode
+{
+    margin-top: 40px;
+    width: 80%;
+    height: 30px;
+    /* border-radius: 2px; */
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500px;
+    color: silver;
+    border: 0.5px solid silver;
+}
+#sam_delievry_pincode_check>div
+{
+    margin-top: 20px;
+    width: 65px;
+    height: 35px;
+    background-color:red;
+    color:white;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+#
