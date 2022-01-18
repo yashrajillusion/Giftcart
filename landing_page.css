@@ -61,9 +61,7 @@ body {
   color: grey;
   text-decoration: none;
 }
-.right_header {
-  /* border: 2px solid red; */
-}
+
 .right_header .account {
   display: flex;
   margin: 0px;
@@ -93,7 +91,92 @@ body {
   text-align: center;
   line-height: 15px;
   font-size: 13px;
-  position: fixed;
+  position: absolute;
   top: 8px;
   right: 60px;
+}
+
+/* this is the design of mid filter nav bar */
+
+.mid_nav {
+  background-color: red;
+  height: 50px;
+}
+.cat_nav {
+  margin: auto;
+  /* width: calc(100% - 150px);
+  border: 3px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat_nav div {
+  color: white;
+  font-family: "Lato", arial, tahoma;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: auto;
+  line-height: 25px;
+  padding-left: 2.4%;
+  padding-right: 2.4%;
+  display: flex;
+  align-items: center;
+}
+
+.cat_nav div:hover {
+  background-color: rgba(255, 255, 255, 0.279);
+}
+.cat_nav div:hover i {
+  display: none;
+}
+.cat_nav i {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.cat_opt {
+  width: 75%;
+  height: auto;
+  border: 2px solid black;
+  position: relative;
+  left: 10%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  display: flex;
+  justify-content: space-between;
+  /* display: none; */
+}
+.cat_opt div {
+  margin-left: 3%;
+  margin-top: 1.6%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.cat_opt a,
+.cat_opt li {
+  text-decoration: none;
+  list-style: none;
+}
+.cat_opt ul {
+  padding: 0px;
+  margin: 0px;
+}
+.cat_opt div h3 {
+  color: red;
+  margin: 2px;
+  margin-bottom: 10px;
+}
+.cat_opt div li {
+  color: gray;
+  line-height: 25px;
+}
+.cat_opt img {
+  padding-right: 5px;
+}
+.cat_aniversary {
+  border: 2px solid black;
+  position: absolute;
+  right: 50%;
+  width: 400px;
+  height: 200px;
 }
