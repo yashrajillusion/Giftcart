@@ -1,1 +1,99 @@
+body {
+  margin: 0px;
+}
+.top_header {
+  border: 1px solid rgb(209, 207, 207);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-social {
+  border: 50px;
+  /* border: 2px solid cyan; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.social {
+  /* border: 2px solid springgreen; */
+  margin: 0px;
+  height: 100%;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+.social li {
+  margin: 0px;
+  padding: 17px;
+  border: 1px solid rgb(209, 207, 207);
+  list-style: none;
+  font-size: 14px;
+  border-top: none;
+  border-bottom: none;
+}
+.social li:hover .fab {
+  color: red;
+}
+.social li:hover {
+  cursor: pointer;
+}
 
+.social a {
+  color: grey;
+}
+.phone {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(209, 207, 207);
+  padding-left: 15px;
+  padding-right: 15px;
+  color: grey;
+}
+.help {
+  color: grey;
+  margin-left: 15px;
+}
+.help:hover a {
+  color: red;
+}
+.help a {
+  color: grey;
+  text-decoration: none;
+}
+.right_header {
+  /* border: 2px solid red; */
+}
+.right_header .account {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+.right_header .account div {
+  display: flex;
+  margin-right: 15px;
+  padding: 14px;
+  padding-right: 5px;
+  border-left: 1px solid rgb(209, 207, 207);
+}
+.cart,
+.fas {
+  font-size: 20px;
+}
+.cart:hover {
+  color: red;
+  cursor: pointer;
+}
+.cart-count {
+  background-color: rgb(241, 15, 15);
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  text-align: center;
+  line-height: 15px;
+  font-size: 13px;
+  position: fixed;
+  top: 8px;
+  right: 60px;
+}
