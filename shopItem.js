@@ -1,11 +1,11 @@
 // let x =document.getElementById("sam_X")
 //     x.addEventListener("click","");
 
-function disappearDiv()
+document.getElementById("sam_X").addEventListener("click",function disappearDiv()
 {
     // event.preventDefault()
     document.getElementById("Sam_alert_popup_message").style.display ="none";
-}
+})
 
 function gotohome()
 {
