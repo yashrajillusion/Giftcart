@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/shopItem.css">
+    <script
+            src="https://kit.fontawesome.com/2281802e38.js"
+            crossorigin="anonymous">
+    </script> 
 </head>
 <body>
     <div id="Sam_alert_popup_message"><div id="sam_alert_line" class="common"><span id="sam_c19_alert">COVID ALERT</span>- We request our customers to empathise and cooperate with us, as deliveries may be delayed by couriers. We stand together in our fight against COVID</div><span onclick="disappearDiv()" id="sam_X" class="common">X</span></div>
@@ -17,22 +21,59 @@
         <div id="Sam_Display_nd_details">
           <div id="Sam_image_display">a</div>
           <div id="Sam_details_display">
-              <h1 class="common">Personalised Love Wall Tiles MDF Set of 4</h1>
-              <div id="sam_product_spec"><div id="sam_id"></div><div id="sam_rating"></div><div id="sam_rating"></div>|<div id="sam_rating_add"><img src="./componets/pen.png">ADD REVIEW</div></div>
-              <h3 class="common">MRP(incl gst)<span id="Sam_add_price_here"></span><span id="Sam_add_price_here_cutoff"></span></h3>
-              <h3 class="common">Your Save<span id="sam_save_amount"></span></h3>
-              <div id="sam_delivery_report"><img src="./componets/green-tick-checkmark-icon-vector-22691505.jpg"><div>Free Shipping</div></div>
-              <div id="sam_related_to_del" class="common"><div>Delivery 4 - 6 Working Days</div><div id="sam_delevery_check"><img src="./componets/icoredlog.png"><div id="sam_picode_check" onclick=toggle_div_visibility()>Delivery Coverage & Charges</div></div></div>
-              <div id="sam_delievry_pincode_check" >
-                  <!-- hidden div for delievry check picode ---->
-                  <input id="sam_input_pincode" class="common" placeholder="Please Enter Your City Pincode">
-                  <div id="Sam_check_button" class="common">CHECK</div>
-              </div>
-              <div id="sam_cartItem_retated" class="common"><div id="sam_item_count"></div></div>
-          </div>    
+                <h1 class="common">Personalised Love Wall Tiles MDF Set of 4</h1>
+                <div id="sam_product_spec"><div id="sam_id"></div><div id="sam_rating"></div><div id="sam_rating"></div>|<div id="sam_rating_add"><img src="./componets/pen.png">ADD REVIEW</div></div>
+                <h3 class="common">MRP(incl gst)<span id="Sam_add_price_here"></span><span id="Sam_add_price_here_cutoff"></span></h3>
+                <h3 class="common">Your Save<span id="sam_save_amount"></span></h3>
+                <div id="sam_delivery_report"><img src="./componets/green-tick-checkmark-icon-vector-22691505.jpg"><div>Free Shipping</div></div>
+                <div id="sam_related_to_del" class="common"><div>Delivery 4 - 6 Working Days</div><div id="sam_delevery_check"><img src="./componets/icoredlog.png"><div id="sam_picode_check" onclick=toggle_div_visibility()>Delivery Coverage & Charges</div></div></div>
+                <div id="sam_delievry_pincode_check" >
+                    <!-- hidden div for delievry check picode ---->
+                    <input id="sam_input_pincode" class="common" placeholder="Please Enter Your City Pincode">
+                    <div id="Sam_check_button" class="common">CHECK</div>
+                    <!-- hidden div which will appper and disapper on click -->
+                </div>
+                <div id="sam_cartItem_retated" class="common"><div id="sam_item_count"><div class="curser">-</div><div></div><div class="curser">+</div></div><div id="sam_add_to_cart" class="common curser">ADD TO CART</div><div class="curser color" id="sam_add_to_cart">BUY NOW</div></div>
+                <div id="sam_wishlist">
+                    <!-- <div id="sam_heart">
+                        <div class="sam_heart_rigth sam_heart" id="sam_heart_common">.</div>
+                        <div class="sam_heart_left sam_heart" id="sam_heart_common">.</div>
+                    </div> -->
+                    <i class="fas fa-heart">ADD TO WISHLIST</i>
+                </div>
+                <div id="sam_wrap_obtion">
+                    <div id="sam_wrap_gift" class="common">Wraps and Boxes</div><div class="common" id="sam_gift_card">Gift Card</div>
+                </div>
+                <div id="sam_hr"></div>
+                <img id="sam_fb_img" src="./componets/fab ass.png"/>
+            </div>    
         </div>
 
         <!-- display and details div end here -->
+
+        <!-- form here we are starting codes for detail elaborate -->
+        <div id="sam_elaborate_margin">
+            <div id="sam_flex">
+                <div class="sam_hover_div" id="sam_keyvalue" onclick="keyfeatures()">KEY FEATURES</div>
+                <div id="sam_keyfeatures" >
+                </div>
+            </div>
+        
+            <div id="sam_flex">
+                <div class="sam_hover_div" id="sam_details">DETAILS</div>
+            </div>
+            <div id="sam_flex">
+                <div class="sam_hover_div" id="sam_dislcaimer">DISCLAIMER</div>
+            </div>
+        
+            <div id="sam_flex">
+                <div class="sam_hover_div" id="sam_brand_details">BRAND DETAILS</div>
+            </div>
+        
+            <div id="sam_flex">
+                <div class="sam_hover_div" id="sam_review_write" >REVIEWS</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
