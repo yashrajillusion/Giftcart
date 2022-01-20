@@ -138,14 +138,16 @@ body {
   width: 75%;
   height: auto;
   border: 2px solid black;
-  position: relative;
+  background-color: white;
+  position: fixed;
   left: 10%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   display: flex;
   justify-content: space-between;
-  /* display: none; */
+  visibility: hidden;
 }
+
 .cat_opt div {
   margin-left: 3%;
   margin-top: 1.6%;
@@ -175,8 +177,132 @@ body {
 }
 .cat_aniversary {
   border: 2px solid black;
-  position: absolute;
+  background-color: white;
+  position: fixed;
   right: 50%;
   width: 400px;
-  height: 200px;
+  height: auto;
+  display: flex;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+.cat_aniversary ul {
+  padding: 0px;
+  margin: 0px;
+}
+.cat_aniversary li {
+  list-style: none;
+  color: gray;
+  line-height: 25px;
+}
+.cat_aniversary a {
+  text-decoration: none;
+}
+.cat_aniversary div h3 {
+  color: rgb(88, 85, 85);
+  margin: 2px;
+  margin-bottom: 10px;
+}
+.cat_aniversary div {
+  margin-left: 3%;
+  margin-top: 1.6%;
+  height: auto;
+  margin-bottom: 3%;
+}
+.cat_birth {
+  width: 500px;
+}
+.valentine {
+  visibility: hidden;
+  width: 120px;
+  height: auto;
+  padding: 10px;
+  right: 46%;
+}
+.valentine li {
+  color: black;
+}
+.recipient {
+  visibility: hidden;
+  width: 120px;
+  padding: 10px;
+  right: 20%;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.sticky div p {
+  color: black;
+}
+.sticky div i {
+  color: black;
+}
+
+/* right sliding nav bar */
+.nav_btn:hover {
+  cursor: pointer;
+}
+.slide_nav {
+  border: 5px solid black;
+  background-color: white;
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  right: -300px;
+  top: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.5s linear;
+}
+.active {
+  width: 290px;
+  right: 0px;
+}
+.close {
+  right: 10px;
+  top: 10px;
+  position: absolute;
+}
+.stickers {
+  border: 2px solid black;
+  width: 100%;
+  height: 50px;
+  margin-top: 40px;
+}
+.slide_nav a {
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.slide_nav p {
+  margin: 0px;
+}
+.contact {
+  background-color: blue;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact p {
+  align-items: center;
+  color: white;
+}
+.slide_nav i {
+  font-size: 14px;
 }
