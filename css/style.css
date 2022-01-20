@@ -23,7 +23,22 @@ ul{
 	width:1252px;
 	height: 70px;
 	background: red;
+	display:flex;
 	
+}
+#links{
+	width:600px;
+	height: 70px;
+
+	margin-left: 195px;
+	display: flex;
+}
+#rdiv{
+	width:70px;
+	height: 70px;
+	margin-left: 30px;
+	
+
 }
 .footer{
 	background-color: #24262b;
@@ -81,6 +96,7 @@ ul{
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
+	display: flex;
 }
 .footer-col .social-links a{
 	display: inline-block;
