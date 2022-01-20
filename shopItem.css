@@ -125,7 +125,7 @@ hr{
 #sam_save_amount
 {
     margin-left: 5px;
-    text-decoration: line-through;
+    color: red;
 }
 #Sam_add_price_here
 {
@@ -135,6 +135,21 @@ hr{
 }
 #Sam_add_price_here>p{
     font-size: 26px;
+
+}
+#Sam_add_price_here>:nth-child(3)
+{
+    margin-left: 20px;
+    margin-top: 26px;
+    color: silver;
+    text-decoration: line-through;
+}
+#Sam_add_price_here>:nth-child(4)
+{
+    /* margin: 2px; */
+    margin-top: 26px;
+    color: silver;
+    text-decoration: line-through;
 
 }
 #sam_product_spec

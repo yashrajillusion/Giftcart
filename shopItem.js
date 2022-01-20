@@ -354,6 +354,8 @@ let arr_bhavesh=[]
     arr.forEach((elem)=>{
     if(temp_check.product_category=='jewellery')
     {
+        let ram = (Math.random()*(1.50-1.25)+1.25).toFixed(2);
+
         document.querySelector("title").innerHTML="";
         document.querySelector("title").innerHTML=`buy ${elem.product}`;
         document.getElementById("Sam_category_page").innerHTML="";
@@ -363,9 +365,9 @@ let arr_bhavesh=[]
         document.querySelector("#Sam_details_display>h1").innerHTML="";
         document.querySelector("#Sam_details_display>h1").innerHTML=elem.product;
         document.getElementById("Sam_add_price_here").innerHTML="";
-        document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(elem.price)).toFixed(2)}</p>`;
+        document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(elem.price)).toFixed(2)}</p><p>&#8377</p><p>${(Number(elem.price)*ram).toFixed(2)}</p>`;
         document.getElementById("sam_save_amount").innerHTML="";
-        document.getElementById("sam_save_amount").innerHTML=`<b>&#8377</b>${(Number(elem.price)*1.25).toFixed(2)}`
+        document.getElementById("sam_save_amount").innerHTML=`${Math.floor((ram-1)*100)}%`
         let img =document.createElement("img")
             img.src=elem.image;
 
