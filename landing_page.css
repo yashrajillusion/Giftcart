@@ -1,6 +1,302 @@
 body {
   margin: 0px;
 }
+
+#karthik_mininav_bar {
+  width: 100%;
+  height: 49px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+}
+
+#karthik_mininav_bar > div {
+  border: 1px solid #f0f0f0;
+}
+
+#karthik_fb {
+  flex: 0.7;
+}
+
+#karthik_t {
+  flex: 0.7;
+}
+
+#karthik_in {
+  flex: 0.7;
+}
+
+#karthik_insta {
+  flex: 0.7;
+}
+
+#karthik_yt {
+  flex: 0.7;
+}
+
+#karthik_pin {
+  flex: 0.7;
+}
+
+#karthik_ph {
+  flex: 6;
+}
+
+#karthik_help {
+  padding-left: 1em;
+  font-size: 105%;
+  flex: 15;
+  /* padding: 0.7rem 1rem; */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#karthik_mininav {
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  font-size: 105%;
+  display: flex;
+}
+
+#hello_btn:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#karthik_cart {
+  flex: 1;
+  color: black;
+}
+
+#karthik_menu {
+  flex: 1;
+}
+
+.fa {
+  padding: 13px 12px;
+}
+
+.fa:hover {
+  color: red;
+}
+
+#dashboard_dropdown {
+  width: 10%;
+  float: right;
+  margin-right: 6%;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 1, 0.3) 0px 1px 3px -1px;
+
+  display: none;
+}
+
+#karthik_d {
+  margin-left: 10%;
+  display: none;
+}
+
+#karthik_count {
+  width: 5%;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 000.1rem 000.2rem;
+}
+
+/*----------------------------------------- create act -------------------------------------*/
+
+/* body {
+padding: 2.5%;
+padding-left: 30%;
+} */
+#karthik_create_container {
+  width: 39%;
+  height: 570px;
+  margin-left: 30%;
+  display: none;
+}
+
+#create_header {
+  padding-top: 1.5%;
+  padding-bottom: 7.5%;
+  padding-left: 5%;
+
+  height: 20px;
+  display: flex;
+
+  background-color: red;
+}
+
+#karthik_create_icon {
+  width: 3%;
+  height: 50%;
+}
+
+#karthik_cross_btn {
+  background-color: transparent;
+  border: 0;
+  color: black;
+  font-size: large;
+}
+#create_header > h2 {
+  padding-right: 38%;
+}
+#details {
+  padding-top: 4%;
+  padding-left: 7%;
+}
+
+#name {
+  width: 43.5%;
+}
+
+#last_name {
+  width: 43.5%;
+}
+
+#div1 {
+  padding-bottom: 4%;
+}
+
+#div1 > input {
+  padding: 10px 0px;
+  padding-right: 6%;
+  /* height: 40px; */
+  border: 1px solid #c7c4c4;
+}
+
+#div2 > input {
+  padding-right: 6%;
+  height: 40px;
+  border: 1px solid #c7c4c4;
+  width: 88%;
+}
+
+#div2 {
+  padding-bottom: 4%;
+}
+
+#div3 {
+  padding-bottom: 4%;
+}
+
+#div3 > input {
+  padding-right: 6%;
+  height: 40px;
+  border: 1px solid #c7c4c4;
+  width: 88%;
+}
+
+#div4 {
+  padding-bottom: 4%;
+  padding-bottom: 10%;
+}
+
+#div4 > input {
+  padding-right: 6%;
+  height: 40px;
+  border: 1px solid #c7c4c4;
+  width: 88%;
+}
+
+#create_btn {
+  border: 0;
+  background-color: red;
+  color: white;
+  width: 90%;
+  height: 40px;
+}
+
+/*----------------------------------------------- login -----------------------------------*/
+/* 
+body {
+padding: 2.5%;
+padding-left: 30%;
+} */
+
+#karthik_signin_container {
+  margin-left: 30%;
+
+  width: 40%;
+  height: 659px;
+  display: none;
+}
+
+#sign_header {
+  display: flex;
+  padding-top: 1.5%;
+  padding-bottom: 7.5%;
+  padding-left: 5%;
+
+  height: 20px;
+  background-color: red;
+  font-size: large;
+}
+
+#cross_btn {
+  background-color: transparent;
+  border: 0;
+  color: black;
+  margin-left: 70%;
+}
+
+#signin_details {
+  padding-left: 5%;
+  padding-top: 2.5%;
+}
+
+#sdiv1 > input {
+  width: 97%;
+}
+
+#sdiv2 > input {
+  width: 97%;
+}
+
+#sdiv2 {
+  padding-bottom: 1%;
+}
+
+#new_join_gift {
+  padding-left: 27%;
+  color: red;
+  font-size: xx-large;
+}
+
+#signup_btn {
+  border: 0;
+  padding: 3%;
+}
+
+#signup_area {
+  padding-top: 4%;
+  padding-left: 40%;
+  padding-bottom: 10%;
+}
+
+#sigin_options {
+  width: 99%;
+  height: 90px;
+  padding-bottom: 10%;
+}
+
+#fb_logo {
+  margin-left: 22%;
+}
+
+#karthik_login_btn {
+  border: 0;
+  background-color: red;
+  color: white;
+  width: 95%;
+  height: 36px;
+}
+
+#sigin_options > p {
+  text-align: center;
+}
+/* this is the css of top nav */
 .top_header {
   border: 1px solid rgb(209, 207, 207);
   height: 50px;
@@ -84,7 +380,7 @@ body {
   cursor: pointer;
 }
 .cart-count {
-  background-color: rgb(241, 15, 15);
+  background-color: #f10102;
   color: white;
   border-radius: 50%;
   padding: 3px;
@@ -95,11 +391,24 @@ body {
   top: 8px;
   right: 60px;
 }
+.hello_signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.right_header .account .hello_signin {
+  border-left: none;
+}
+.right_header .account .hello_signin i {
+  font-size: 13px;
+}
 
 /* this is the design of mid filter nav bar */
 
 .mid_nav {
-  background-color: red;
+  background-color: #f10102;
   height: 50px;
 }
 .cat_nav {
@@ -109,6 +418,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
 }
 .cat_nav div {
   color: white;
@@ -121,13 +431,14 @@ body {
   padding-right: 2.4%;
   display: flex;
   align-items: center;
+  height: 50px;
 }
 
 .cat_nav div:hover {
   background-color: rgba(255, 255, 255, 0.279);
 }
 .cat_nav div:hover i {
-  display: none;
+  /* display: none; */
 }
 .cat_nav i {
   margin-left: 8px;
@@ -137,9 +448,9 @@ body {
 .cat_opt {
   width: 75%;
   height: auto;
-  border: 2px solid black;
+
   background-color: white;
-  position: fixed;
+  position: absolute;
   left: 10%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -164,26 +475,26 @@ body {
   margin: 0px;
 }
 .cat_opt div h3 {
-  color: red;
+  color: #f10102;
+  font-family: "Lato", arial, tahoma;
   margin: 2px;
   margin-bottom: 10px;
 }
 .cat_opt div li {
-  color: gray;
+  color: rgb(95, 94, 94);
   line-height: 25px;
 }
 .cat_opt img {
   padding-right: 5px;
 }
 .cat_aniversary {
-  border: 2px solid black;
   background-color: white;
-  position: fixed;
+  position: absolute;
   right: 50%;
   width: 400px;
   height: auto;
   display: flex;
-  border: 2px solid black;
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   display: flex;
@@ -197,7 +508,7 @@ body {
 }
 .cat_aniversary li {
   list-style: none;
-  color: gray;
+  color: rgb(95, 94, 94);
   line-height: 25px;
 }
 .cat_aniversary a {
@@ -231,7 +542,7 @@ body {
   visibility: hidden;
   width: 120px;
   padding: 10px;
-  right: 20%;
+  right: 24%;
 }
 .sticky {
   position: fixed;
@@ -253,9 +564,8 @@ body {
   cursor: pointer;
 }
 .slide_nav {
-  border: 5px solid black;
   background-color: white;
-  width: 290px;
+  width: 270px;
   height: 100vh;
   position: fixed;
   right: -300px;
@@ -265,7 +575,7 @@ body {
   transition: 0.5s linear;
 }
 .active {
-  width: 290px;
+  width: 270px;
   right: 0px;
 }
 .close {
@@ -274,10 +584,11 @@ body {
   position: absolute;
 }
 .stickers {
-  border: 2px solid black;
   width: 100%;
-  height: 50px;
+  height: 55px;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 .slide_nav a {
   margin: 25px;
@@ -293,7 +604,7 @@ body {
   margin: 0px;
 }
 .contact {
-  background-color: blue;
+  background-color: #0090c5;
   height: 40px;
   display: flex;
   align-items: center;
@@ -305,4 +616,73 @@ body {
 }
 .slide_nav i {
   font-size: 14px;
+}
+
+/* this is the top_seacrch css */
+.mid_search {
+  padding: 15px;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.search_mic {
+  width: 700px;
+  height: 42px;
+  display: flex;
+  align-content: center;
+}
+.search_mic button {
+  background-color: #f0f0f0;
+  border: 1px solid #dbdbdb;
+  font-size: 30px;
+}
+.search_mic button span {
+  font-size: 30px;
+  padding: 6px;
+}
+.search_mic input {
+  width: 80%;
+  border-radius: 0px;
+  border: 1px solid rgb(95, 94, 94);
+}
+.gift_logo {
+  margin-left: 3%;
+}
+.gift_now_btn {
+  background-color: burlywood;
+  color: white;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: linear-gradient(to right, #a20b6a, #d80806);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.gift_now_btn a {
+  text-decoration: none;
+  color: white;
+  margin-right: 5px;
+  font-family: "Lato", arial, tahoma;
+  font-weight: normal;
+}
+.hatke {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5%;
+  /* margin-bottom: 2%; */
+}
+.sticky_nav i {
+  font-size: 16px;
+}
+.stickers img {
+  height: 100%;
 }
