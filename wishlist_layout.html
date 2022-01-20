@@ -7,120 +7,184 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      type="text/css"
-      media="all"
-      href="https://style.giftcart.com/pub/static/_cache/merged/ba33a3ae125fe1c0ffec40f2b0073279.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+
     <style>
+      body {
+        font-family: arial, tahoma;
+      }
       #karthik_wishlist_layout {
+        display: block;
         border: 1px solid black;
         width: 75%;
         margin-left: 12.5%;
-        height: 1000px;
+        
       }
+
       #wishlist_container {
         display: flex;
-        border: 1px solid black;
-        height: 530px;
         width: 98%;
-        margin-left: 1%;
+        margin-left: 1.5%;
         margin-top: 7%;
       }
+
       #wishlist_dashboard {
         border: 1px solid black;
-        width: 25%;
-      }
-      #wishlist_dashboard_details {
-        border: 1px solid black;
-        width: 100%;
-        height: 400px;
-        padding: 5%;
+        width: 22%;
+        height: 340px;
         background-color: #f6f6f6;
+        padding: 1%;
       }
+
+      #wishlist_dashboard_details {
+        width: 100%;
+        
+        
+        
+      }
+
       #wishlist_dashboard_details > p {
         color: black;
         font-size: large;
         font-weight: bold;
       }
-      #dashboard_opts {
-        margin-left: 8%;
+
+      a {
+        text-decoration: none;
+        color: black;
+        line-height: 35px;
       }
-      a:hover {
-        font-weight: bold;
-      }
+
       #wishlist_right {
-        border: 1px solid black;
         height: 80%;
         width: 73%;
-        margin-left: 2%;
+        margin-left: 4%;
       }
+
       #no_of_items {
-        background-color: #f6f6f6;
-        border: 1px solid black;
-        height: 12.5%;
-        width: 100%;
-        margin-bottom: 2.5%;
-      }
-      #item_details_div {
         display: flex;
-        border: 1px solid black;
-        height: 85%;
+        padding: 2% 2% 0% 2%;
+        background-color: #f6f6f6;
+        height: 35px;
+        width: 95%;
+        margin-bottom: 2.5%;
+        justify-content: space-between;
+        color: grey;
+      }
+
+      #item_details_div {
+        display: block;
+        /* height: 85%; */
         width: 100%;
         margin-right: 2.5%;
       }
+
       #item_pic {
         border: 1px solid black;
-        height: 90%;
+        height: 95%;
         width: 30%;
         margin-right: 2.5%;
       }
+      #item_pic > img {
+        width: 100%;
+        height: 100%;
+      }
+
       #item_details {
-        border: 1px solid red;
         width: 67.5%;
       }
 
       #item_qty {
         width: 9%;
-        padding: 1% 0% 1% 2%;
-        margin-bottom: 2%;
+        padding: 1% 0% 1% 1%;
+        margin-bottom: 8%;
       }
+
       #item_price {
         color: red;
       }
+
       label {
         color: black;
       }
+
       textarea {
-        border: 1px solid black;
         height: 50px;
         width: 90%;
         padding: 2px 5px;
       }
-      #wishlist_add_to_cart{
-          background-color: red;
-          border: 0;
-          color: white;
-          padding: 1%;
-          margin-bottom: 3%;
+
+      #wishlist_add_to_cart {
+        background-color: red;
+        border: 0;
+        color: white;
+        padding: 1%;
+        margin-bottom: 3%;
       }
-      .fa{
-          color: red;
-          font-size: large;
-          margin-right: 2%;
+
+      #ka_remove_btn {
+        color: red;
+        font-size: large;
+        margin-right: 2%;
+      }
+
+      #ka_edit {
+        color: red;
+        font-size: large;
+        margin-right: 2%;
+        margin-left: 33%;
+      }
+
+      #wishlist_options {
+        width: 100%;
+        height: 36px;
+        margin-top: 7%;
+      }
+      #wishlist_back {
+        margin-left: 43%;
+        padding: 0.2% 1.3%;
+        border: 0;
+      }
+      .wo {
+        border: 0;
+        background-color: red;
+        color: white;
+        padding: 0.75%;
+      }
+      #dashboard_opts > li {
+        font-size: 14px;
+
+      }
+      #dashboard_opts{
+        width: 70%;
+      }
+      .item_details_div {
+        display: flex;
+        height: 300px;
+        
+      }
+      .parent_item{
+        border-bottom: 1px solid rgb(160, 154, 154);
+        margin-bottom: 5%;
+        padding-bottom: 30px;
       }
     </style>
   </head>
+
   <body>
     <div id="karthik_wishlist_layout">
-      <i>Home / My Account</i>
+      <p style="font-style: italic; color: #938a8a; font-size: 13px">
+        Home / My Account
+      </p>
       <hr />
       <div id="wishlist_container">
         <div id="wishlist_dashboard">
           <div id="wishlist_dashboard_details">
             <p>MY ACCOUNT</p>
             <hr />
-            <ul id="dashboard_opts">
-              <li><a href="#">MY WISHLIST</a></li>
+            <ul id="dashboard_opts" style="list-style: none">
+              <li><a href="#" style="color: red">MY WISHLIST</a></li>
               <hr />
               <li><a href="#">ACCOUNT DASHBOARD</a></li>
               <hr />
@@ -134,12 +198,100 @@
         </div>
 
         <div id="wishlist_right">
-          <div id="no_of_items"></div>
+          <div id="no_of_items">
+            <div id="no.ofitems"><span id="ka_item_count"></span> Item</div>
+            <div id="no.ofpages">
+              <label style="color: grey"><b>Show</b></label>
+              <select name="" id="">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option></select
+              >per page
+            </div>
+          </div>
           <div id="item_details_div">
-            <div id="item_pic"></div>
+            
+          </div>
+          <div id="wishlist_options">
+            <button id="update_wishlist" class="wo">UPDATE WISHLIST</button>
+            <button id="share_wishlist" class="wo">SHARE WISHLIST</button>
+            <button id="add_to_cartall" class="wo">ADD ALL TO CART</button>
+            <button id="wishlist_back"><a href="index.html">Back</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // var obj = [
+  //   {
+  //     image: "https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png",
+  //     product: "prdouct name will be her dfkdnbdi idfbeiudnk eifiufn",
+  //     price: "23242",
+  //   },
+  //   {
+  //     image: "https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png",
+  //     product: "prdouct name will be her dfkdnbdi idfbeiudnk eifiufn",
+  //     price: "23242",
+  //   },
+  //   {
+  //     image: "https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png",
+  //     product: "prdouct name will be her dfkdnbdi idfbeiudnk eifiufn",
+  //     price: "23242",
+  //   },
+  //   {
+  //     image: "https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png",
+  //     product: "prdouct name will be her dfkdnbdi idfbeiudnk eifiufn",
+  //     price: "23242",
+  //   },
+  // ];
+
+  // var obj2 = [
+  //   {
+  //     image: "https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png",
+  //     product: "obj2 item 1",
+  //     price: "23242",
+  //   },
+  //   {
+  //     image: "https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png",
+  //     product: "obj2 item 2",
+  //     price: "23242",
+  //   },
+  // ];
+
+  // localStorage.setItem("productlist", JSON.stringify(obj2));
+
+  // localStorage.setItem("wishListData", JSON.stringify(obj));
+  let arr = JSON.parse(localStorage.getItem("wishListData")) || [];
+  console.log(arr);
+
+  appendWishlist(arr);
+  function appendWishlist(items) {
+    document.getElementById("item_details_div").innerHTML = null;
+    let total = document.getElementById("ka_item_count");
+    total.innerText = `${arr.length}`;
+    if(arr.length===0){
+      let remove_options = document.querySelectorAll(".wo");
+      console.log('remove_options:', remove_options.length)
+      for(let i = 0; i < remove_options.length; i++){
+        remove_options[i].style.display = "none";
+      }
+      return
+    }
+    
+    items.forEach((el, index) => {
+      let parent_main = document.createElement("div");
+      parent_main.setAttribute("class", "parent_item")
+
+      let main_div = document.createElement("div");
+      main_div.setAttribute("class", "item_details_div");
+      main_div.innerHTML = `
+         <div id="item_pic"><img src=${el.image} alt=""></div>
             <div id="item_details">
-              <a href="">Lorem ipsum dolor, siosam! Optio, odio deleniti?</a>
-              <h4 id="item_price">₹999.00</h4>
+              <a href="">${el.product}</a>
+              <h4 id="item_price">${el.price}</h4>
               <label for="">Comment</label>
               <textarea
                 id="item_comment"
@@ -148,14 +300,45 @@
               ></textarea
               ><br />
               <label for="">Qty</label><br />
-              <input type="number" id="item_qty" value="1" /><br>
-              <button id="wishlist_add_to_cart">ADD TO CART</button><br>
-              <i class="fa fa-edit"></i>         
-              <i class="fa fa-remove"></i>
+              <input type="number" id="item_qty" value="1" /><br />
+              <button id="wishlist_add_to_cart">ADD TO CART</button><br />
+
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+          
+      `;
+      let div2 = document.createElement("div");
+
+      let edit_icon = document.createElement("i");
+      edit_icon.setAttribute("id", "ka_edit");
+      edit_icon.innerHTML = `<i class="fas fa-edit"></i>`;
+
+      let remove_btn = document.createElement("i");
+      remove_btn.setAttribute("id", "ka_remove_btn");
+      remove_btn.innerHTML = `<i class="fas fa-times"></i>`;
+      div2.append(edit_icon, remove_btn)
+      parent_main.append(main_div,div2)
+      document
+        .getElementById("item_details_div")
+        .append(parent_main);
+      
+      remove_btn.addEventListener("click", function () {
+        console.log("here", index);
+        items.splice(index, 1);
+        localStorage.setItem("wishListData", JSON.stringify("items"));
+        appendWishlist(items);
+      });
+    });
+  }
+  let add_allto_cart = document.getElementById("add_to_cartall");
+  add_allto_cart.addEventListener("click", function () {
+    let arr2 = JSON.parse(localStorage.getItem("productlist"));
+    let arr = JSON.parse(localStorage.getItem("wishListData"));
+    while (arr.length !== 0) {
+      arr2.push(arr[0]);
+      arr.shift();
+    }
+    localStorage.setItem("wishListData", JSON.stringify(arr));
+    console.log(arr2);
+  });
+</script>
