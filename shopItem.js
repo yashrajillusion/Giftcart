@@ -354,6 +354,8 @@ let arr_bhavesh=[]
     arr.forEach((elem)=>{
     if(temp_check.product_category=='jewellery')
     {
+        document.querySelector("title").innerHTML="";
+        document.querySelector("title").innerHTML=`buy ${elem.product}`;
         document.getElementById("Sam_category_page").innerHTML="";
         document.getElementById("Sam_category_page").innerHTML=`<i>/ ${elem.product_category}</i>`;
         document.getElementById("Sam_name_product").innerHTML="";
