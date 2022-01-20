@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="https://style.giftcart.com/pub/static/_cache/merged/ba33a3ae125fe1c0ffec40f2b0073279.min.css"
+    />
+    <style>
+      #karthik_wishlist_layout {
+        border: 1px solid black;
+        width: 75%;
+        margin-left: 12.5%;
+        height: 1000px;
+      }
+      #wishlist_container {
+        display: flex;
+        border: 1px solid black;
+        height: 530px;
+        width: 98%;
+        margin-left: 1%;
+        margin-top: 7%;
+      }
+      #wishlist_dashboard {
+        border: 1px solid black;
+        width: 25%;
+      }
+      #wishlist_dashboard_details {
+        border: 1px solid black;
+        width: 100%;
+        height: 400px;
+        padding: 5%;
+        background-color: #f6f6f6;
+      }
+      #wishlist_dashboard_details > p {
+        color: black;
+        font-size: large;
+        font-weight: bold;
+      }
+      #dashboard_opts {
+        margin-left: 8%;
+      }
+      a:hover {
+        font-weight: bold;
+      }
+      #wishlist_right {
+        border: 1px solid black;
+        height: 80%;
+        width: 73%;
+        margin-left: 2%;
+      }
+      #no_of_items {
+        background-color: #f6f6f6;
+        border: 1px solid black;
+        height: 12.5%;
+        width: 100%;
+        margin-bottom: 2.5%;
+      }
+      #item_details_div {
+        display: flex;
+        border: 1px solid black;
+        height: 85%;
+        width: 100%;
+        margin-right: 2.5%;
+      }
+      #item_pic {
+        border: 1px solid black;
+        height: 90%;
+        width: 30%;
+        margin-right: 2.5%;
+      }
+      #item_details {
+        border: 1px solid red;
+        width: 67.5%;
+      }
+
+      #item_qty {
+        width: 9%;
+        padding: 1% 0% 1% 2%;
+        margin-bottom: 2%;
+      }
+      #item_price {
+        color: red;
+      }
+      label {
+        color: black;
+      }
+      textarea {
+        border: 1px solid black;
+        height: 50px;
+        width: 90%;
+        padding: 2px 5px;
+      }
+      #wishlist_add_to_cart{
+          background-color: red;
+          border: 0;
+          color: white;
+          padding: 1%;
+          margin-bottom: 3%;
+      }
+      .fa{
+          color: red;
+          font-size: large;
+          margin-right: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="karthik_wishlist_layout">
+      <i>Home / My Account</i>
+      <hr />
+      <div id="wishlist_container">
+        <div id="wishlist_dashboard">
+          <div id="wishlist_dashboard_details">
+            <p>MY ACCOUNT</p>
+            <hr />
+            <ul id="dashboard_opts">
+              <li><a href="#">MY WISHLIST</a></li>
+              <hr />
+              <li><a href="#">ACCOUNT DASHBOARD</a></li>
+              <hr />
+              <li><a href="#">ACCOUNT INFORMATION</a></li>
+              <hr />
+              <li><a href="#">ADDRESS BOOK</a></li>
+              <hr />
+              <li><a href="#">MY ORDERS</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="wishlist_right">
+          <div id="no_of_items"></div>
+          <div id="item_details_div">
+            <div id="item_pic"></div>
+            <div id="item_details">
+              <a href="">Lorem ipsum dolor, siosam! Optio, odio deleniti?</a>
+              <h4 id="item_price">₹999.00</h4>
+              <label for="">Comment</label>
+              <textarea
+                id="item_comment"
+                placeholder="Comment"
+                title="Comment"
+              ></textarea
+              ><br />
+              <label for="">Qty</label><br />
+              <input type="number" id="item_qty" value="1" /><br>
+              <button id="wishlist_add_to_cart">ADD TO CART</button><br>
+              <i class="fa fa-edit"></i>         
+              <i class="fa fa-remove"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
