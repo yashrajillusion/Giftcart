@@ -7,10 +7,34 @@ document.getElementById("sam_X").addEventListener("click",function disappearDiv(
     document.getElementById("Sam_alert_popup_message").style.display ="none";
 })
 
-function gotohome()
+//eventlister for home page 
+document.getElementById("Sam_home_link").addEventListener("click",function ()
 {
     window.location.href ="/index.html"
-}
+})
+
+//evetlister for jewelllery page
+document.getElementById("Sam_category_page").addEventListener("click",function (){
+    let cat =document.getElementById("Sam_category_page").innerHTML;
+    console.log(cat)
+    if( cat =='<i>/ jewellery</i>')
+    {
+        window.location.href="/jewellery.html"
+    }
+})
+
+//eventlistenre for product name 
+document.getElementById("Sam_name_product").addEventListener("click",function (){
+    let cat =document.getElementById("Sam_category_page").innerHTML;
+    console.log(cat)
+    if( cat =='<i>/ jewellery</i>')
+    {
+        window.location.href="/jewellery.html"
+    }
+})
+
+
+//PINCODE CHECK HIDDEN DIVES FUNCTIONALITY START HERE
 
 {
 
@@ -28,14 +52,81 @@ function gotohome()
         {
             console.log("i am Invisible")
             document.getElementById("sam_delievry_pincode_check").style.display ="none";
+            document.getElementById("sam_alert_append_div").style.display="none"
+            // window.location.reload()
             count =0;
         }
 
     }
 }
 
+// CHECK THE PICODE
+
+{
+let count =0;
+document.getElementById("Sam_check_button").addEventListener("click",function (){
+
+    count++;
+
+    let val =document.getElementById("sam_input_pincode").value
+
+    if(val.length ==6 && count==1)
+    {
+        document.getElementById("sam_please_wait_message").style.display="block"
+        document.getElementById("sam_please_wait_message").innerHTML="Please Wait..." 
+        setTimeout(()=>{
+            document.getElementById("sam_please_wait_message").style.display="none";
+            document.getElementById("sam_please_wait_message").innerHTML="";
+            document.getElementById("sam_alert_append_div").innerHTML=""; 
+            document.getElementById("sam_alert_append_div").style.display="block"
+            document.getElementById("sam_alert_append_div").style.height="70px";
+            document.getElementById("sam_alert_append_div").style.paddingLeft="0px";
+            let div = document.createElement("div")
+            div.setAttribute("id","sam_alert_pincode")
+            div.innerHTML =`<ul>
+                            <li>Standard Delivery service is available in your area.</li>
+                            </ul>
+                            `
+            let div2 =document.createElement("div")
+            div2.setAttribute("id","sam_free_delivery_shift_left")
+            div2.append(`Free Delivery`)
+            document.getElementById("sam_alert_append_div").append(div,div2)},2000)
+        count=0;
+    }
+    else if(val.length !=6 && count ==1)
+    {
+        document.getElementById("sam_please_wait_message").style.display="block"
+        document.getElementById("sam_please_wait_message").innerHTML="Please Wait..." 
+    
+        setTimeout(()=>{
+            document.getElementById("sam_please_wait_message").style.display="none";
+            document.getElementById("sam_please_wait_message").innerHTML="";
+            document.getElementById("sam_alert_append_div").innerHTML=""; 
+            document.getElementById("sam_alert_append_div").style.display="block"
+            document.getElementById("sam_alert_append_div").style.height="50px"
+            document.getElementById("sam_alert_append_div").style.paddingLeft="15px";
+            let div = document.createElement("div")
+            div.setAttribute("id","sam_alert_pincode")
+            div.innerHTML ="Sorry. Delivery service is not available for the pin code entered."
+            document.getElementById("sam_alert_append_div").append(div)},2000)
+        count=0;
+    }
+    else
+    {
+        document.getElementById("sam_alert_append_div").style.display="none";
+        document.getElementById("sam_alert_append_div").style.height="70px";
+        document.getElementById("sam_alert_append_div").style.paddingLeft="15px";
+    }
+
+})
 
 
+}
+
+
+
+
+// KEY VALUES JS CODES
 // elaborate section JS codes
 {
     let count =0;
@@ -164,3 +255,145 @@ function gotohome()
             document.getElementById("sam_keyfeatures").style.display ="none"
         }})
 }
+
+// functionality for adding count of products
+{
+    let count =1;
+    document.getElementById("sam_display_value_count").innerHTML=count;
+    document.getElementById("sam_subtracting_count").addEventListener("click",function (){
+        if(count>1 &&count<10)
+        {
+        count--;
+        document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
+        document.getElementById("sam_display_value_count").innerHTML=""
+        document.getElementById("sam_display_value_count").innerHTML=count;
+        }
+        else if(count>=9 &&count<100)
+        {
+            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
+            count--;
+            document.getElementById("sam_display_value_count").innerHTML=""
+            document.getElementById("sam_display_value_count").innerHTML=count;
+        }
+        else if(count>=99)
+        {
+            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
+            count--;
+            document.getElementById("sam_display_value_count").innerHTML=""
+            document.getElementById("sam_display_value_count").innerHTML=count;
+        }
+
+    })
+
+    document.getElementById("sam_adding_count").addEventListener("click",function (){
+        if(count>=1 &&count<10)
+        {
+        count++;
+        document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
+        document.getElementById("sam_display_value_count").innerHTML=""
+        document.getElementById("sam_display_value_count").innerHTML=count;
+        }
+        else if(count>=9 &&count<100)
+        {
+            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
+            count++;
+            document.getElementById("sam_display_value_count").innerHTML=""
+            document.getElementById("sam_display_value_count").innerHTML=count;
+        }
+        else if(count>=99)
+        {
+            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
+            count++;
+            document.getElementById("sam_display_value_count").innerHTML=""
+            document.getElementById("sam_display_value_count").innerHTML=count;
+        }
+
+    })
+}
+
+// add to cart button functionality
+
+{
+let arr_bhavesh=[]
+
+    document.getElementById("sam_add_to_cart").addEventListener("click",()=>{
+
+    // console.log("HII i am adding product to the cart")
+    let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
+// localStorage.setItem("clickedJewelleryData", JSON.stringify(data))//by sumit kartik dgeting data
+
+
+    let count =document.getElementById("sam_display_value_count").innerHTML
+
+    let obj_transfer_to_bhavesh= {
+        image:obj_data_get_from_sumit.image,
+        product:obj_data_get_from_sumit.product,
+        price:Number(obj_data_get_from_sumit.price),
+        product_count:Number(count)
+    }
+
+    arr_bhavesh.push(obj_transfer_to_bhavesh)
+
+    localStorage.setItem("productlist",JSON.stringify(arr_bhavesh))
+// var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  transfer data 
+    })
+}
+
+
+{
+
+    let temp_check ={
+        image:'https://media.istockphoto.com/photos/fancy-designer-antique-golden-bracelets-for-woman-fashion-picture-id1277517088?b=1&k=20&m=1277517088&s=170667a&w=0&h=PXTQvh19pESR7mIekh3mJQHWcw2FDRrYcHdxsv9XY-Q=',
+        product:'gold with red ruby gems necklace',
+        price:"234100",
+        product_category:'jewellery'
+    }
+
+    let arr =[]
+    arr.push(temp_check)
+    arr.forEach((elem)=>{
+    if(temp_check.product_category=='jewellery')
+    {
+        document.getElementById("Sam_category_page").innerHTML="";
+        document.getElementById("Sam_category_page").innerHTML=`<i>/ ${elem.product_category}</i>`;
+        document.getElementById("Sam_name_product").innerHTML="";
+        document.getElementById("Sam_name_product").innerHTML=`<i>/ ${elem.product}</i>`;
+        document.querySelector("#Sam_details_display>h1").innerHTML="";
+        document.querySelector("#Sam_details_display>h1").innerHTML=elem.product;
+        document.getElementById("Sam_add_price_here").innerHTML="";
+        document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(elem.price)).toFixed(2)}</p>`;
+        document.getElementById("sam_save_amount").innerHTML="";
+        document.getElementById("sam_save_amount").innerHTML=`<b>&#8377</b>${(Number(elem.price)*1.25).toFixed(2)}`
+        let img =document.createElement("img")
+            img.src=elem.image;
+
+        document.getElementById("Sam_image_display").append(img)
+            // Sam_image_display
+    }
+    })
+}
+
+
+//Wrap gift functionality
+{
+    document.getElementById("sam_wrap_gift").addEventListener("click",function (){
+
+        document.getElementById("sam_wrap_gift").style.borderBottomColor ="steelblue"
+        document.getElementById("sam_gift_card").style.borderBottomColor ="silver"
+    })
+}
+
+// Gift card functionality
+
+{
+    document.getElementById("sam_gift_card").addEventListener("click",function (){
+
+        document.getElementById("sam_gift_card").style.borderBottomColor ="steelblue"
+        document.getElementById("sam_wrap_gift").style.borderBottomColor ="silver"
+    })
+}
+
+
+
+
+
