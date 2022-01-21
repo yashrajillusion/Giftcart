@@ -54,7 +54,7 @@
                     <p class="Bs_address">address</p>
                     <p>india</p>
                     <p class="Bs_phone_number">8639245924</p>
-                    <button id="Bs_payment_btn1">PAY WITH RAZORPAY</button>
+                    <button onclick="RazonPayment()" id="Bs_payment_btn1">PAY WITH RAZORPAY</button>
                 </div>
 
                 <div id="Bs_payment_M2">
@@ -71,7 +71,7 @@
                     <p class="Bs_address">address</p>
                     <p>india</p>
                     <p class="Bs_phone_number">8639245924</p>
-                    <button id="Bs_payment_btn2">CONTINUE CHECKOUT</button>
+                    <button onclick="RazonPayment()" id="Bs_payment_btn2">CONTINUE CHECKOUT</button>
                 </div>
 
                 <div id="Bs_payment_M3">
@@ -140,8 +140,8 @@
                 <button id="Bs_btn_for_payment"><img src="https://www.pinclipart.com/picdir/big/581-5814701_transparent-background-left-arrow-clipart.png" alt=""> Pay Giftcart</button>
                 <img src="https://pbs.twimg.com/profile_images/890542589253869568/Dwz63L0E_400x400.jpg" alt="">
                <div>
-                <p id="total_amount">61649</p>
-                <p>View Details</p>
+                <p id="total_amount"></p>
+                <p class="Bs_view_D">View Details</p>
                </div>
                 <p>transaction id :0061653854388</p>
             </div>
@@ -152,21 +152,21 @@
                 </div>
                 <form onsubmit="HardCode(event)" class="Bs_py_div2_part2">
                     <p class="Bs_py_text">New Card</p>
-                    <input class="Bs_inp" type="text" placeholder="Enter Card Number">
+                    <input id="Bs_card_number" class="Bs_inp" type="text" placeholder="Enter Card Number">
                     <p class="Bs_py_text2">CVV</p>
-                    <input class="Bs_py_input2" type="text" placeholder="Enter CVV">
+                    <input id="BS_card_cvv" class="Bs_py_input2" type="text" placeholder="Enter CVV">
                     <p class="Bs_py_text">Expiry</p>
-                    <input class="Bs_inp" type="text" placeholder="MM/YY">
+                    <input id="BS_card_expiry" class="Bs_inp" type="number" placeholder="MM/YY">
                     <p class="Bs_py_text">Name on Card</p>
-                    <input class="Bs_inp" type="text" placeholder="Enter Name as Card">
+                    <input id="Bs_card_username" class="Bs_inp" type="text" placeholder="Enter Name as Card">
                     <div class="Bs_py_div2_inpart3">
                         <input id="checkbox_py" type="checkbox">
                         <p><label for="checkbox_py">Save this option</label></p>
                     </div>
                     <div class="Bs_py_div2_inpart2">
                     <p>securely for faster payment</p>
-                    <input class="Bs_button_submit" type="submit" value="PROCCED">
-                    </div>
+                </div>
+                <input class="Bs_button_submit" type="submit" value="PROCEED">
                 </form>
             </div>
         </div>
@@ -174,10 +174,30 @@
 </body>
 </html>
 <script>
-// btn 1
-// btn 2
-// btn 3
-    
+    function RazonPayment() {
+        // let paymetn_amount = 10;
+
+        // yash you can write your code here
+    }
+
+    // this is for applying discount code Masai99 the total price become 10Rs.
+    function discountApply() {
+        let dd = document.getElementById('Bs_discount_code').value;
+
+        if(dd !== "Masai99"){
+            return;
+        }
+        let cart_Total = document.getElementById('Bs_cart_total');
+        cart_Total.innerText = `10`;
+        let charge_amount = 0;
+        let charge = document.getElementById('Bs_charges');
+        charge.innerText = charge_amount;
+        let order_total = document.getElementById('Bs_order_total');
+        order_total.textContent = `${10}`;
+        let py_total = document.getElementById('total_amount');
+        py_total.innerText = `₹${10}`;
+    }
+
     let btn1 = document.getElementById('Bs_payment_btn1');
     btn1.addEventListener('click',()=> {
         console.log('ere')
@@ -191,6 +211,39 @@
 
     })
 
+    function HardCode(event) {
+        event.preventDefault()
+        console.log('ere')
+        let card_number = document.getElementById('Bs_card_number').value;
+        let card_cvv = document.getElementById('BS_card_cvv').value;
+        let card_exp = document.getElementById('BS_card_expiry').value;
+        let card_username = document.getElementById('Bs_card_username').value;
+
+        if(card_number.length !== 16){
+            
+            alert('Enter Right Card Number');
+            return;
+        }
+        if(card_cvv.length !== 3){
+            alert('Enter correct CVV Number');
+            return;
+        }
+        if(card_exp.length !== 4){
+            alert('Card Expiry Date is wrong');
+            return;
+        }
+        if(card_username.length === ''){
+            alert('invalid userName');
+            return;
+        }
+        else {
+            alert('Your payment is successful, Thank you using giftcard.')
+            window.location.href = './index.html';
+        }
+    }
+
+
+
     let btn3 = document.getElementById('Bs_payment_btn3');
     btn3.addEventListener('click',()=> {
         // this is hard coded data
@@ -199,13 +252,23 @@
 
     })
 
+
+
+
+
+
+
+
+
+
     let btn_pay = document.getElementById('Bs_btn_for_payment');
     btn_pay.addEventListener('click',function (){
         let payment_page = document.getElementById("Bs_payment_hard_div");
         payment_page.style.display = 'none';
+
     })
 
-    let re = 10;
+    
 
     let items = JSON.parse(localStorage.getItem('productlist'));
     document.getElementById('Bs_total_Citems').innerText = `${items.length} Items in Cart`
@@ -255,11 +318,6 @@
     })
 
 
-
-
-
-
-
     let radio1= document.getElementById('radio1');
     radio1.addEventListener('click',function(){
         if(div1.style.display == 'none'){
@@ -269,8 +327,7 @@
         }
         else {
             div1.style.display = 'none';
-        }
-        
+        }   
     })
     let radio2= document.getElementById('radio2');
     radio2.addEventListener('click',function(){
@@ -329,6 +386,8 @@
         charge.innerText = charge_amount;
         let order_total = document.getElementById('Bs_order_total');
         order_total.textContent = `${totalDD+160}`;
+        let py_total = document.getElementById('total_amount');
+        py_total.innerText = `₹${totalDD}`;
     }
 
     let shownoshow = document.querySelector('#Bs_cart_items_div');
