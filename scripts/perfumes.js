@@ -304,14 +304,14 @@ function appendJewellery(data){
         jewellery_img.onclick=()=>{
             localStorage.setItem("clickedJewelleryData", JSON.stringify(element))
 
-        window.location.href = '/new.html'
+        window.location.href = '/shopItem.html'
            
         }
         //////////////////////////WishList///////////////////////
         heart_div.onclick=()=>{
             localStorage.setItem("wishListData", JSON.stringify(element))
 
-window.location.href = '/new.html'
+window.location.href = '/wishlist_layout'
             
          }
 

@@ -92,8 +92,8 @@ async function getJewellery(url){
          let data_to_send ={
             image:element.image,
             product: element.title,
-            price:  (Math.random(element.price)*10000+1).toFixed(2),
-            
+            price:  element.price,
+            sub_category:element.sub_category,
             
         };
         ///////////////////function showData//////////////////////
@@ -115,7 +115,7 @@ async function getJewellery(url){
         
         localStorage.setItem("clickedJewelleryData", JSON.stringify(data))
 
-        window.location.href = '/new.html'
+        window.location.href = '/shopItem.html'
 
         
     }
@@ -125,7 +125,7 @@ async function getJewellery(url){
         
         localStorage.setItem("wishListData", JSON.stringify(data))
 
-        window.location.href = '/new.html'
+        window.location.href = '/wishlist_layout.html'
 
         
     }
