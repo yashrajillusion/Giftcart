@@ -349,32 +349,35 @@ let arr_bhavesh=[]
         product_category:'jewellery'
     }
 
-    let arr =[]
-    arr.push(temp_check)
-    arr.forEach((elem)=>{
-    if(temp_check.product_category=='jewellery')
-    {
-        let ram = (Math.random()*(1.50-1.25)+1.25).toFixed(2);
+    
 
-        document.querySelector("title").innerHTML="";
-        document.querySelector("title").innerHTML=`buy ${elem.product}`;
-        document.getElementById("Sam_category_page").innerHTML="";
-        document.getElementById("Sam_category_page").innerHTML=`<i>/ ${elem.product_category}</i>`;
-        document.getElementById("Sam_name_product").innerHTML="";
-        document.getElementById("Sam_name_product").innerHTML=`<i>/ ${elem.product}</i>`;
-        document.querySelector("#Sam_details_display>h1").innerHTML="";
-        document.querySelector("#Sam_details_display>h1").innerHTML=elem.product;
-        document.getElementById("Sam_add_price_here").innerHTML="";
-        document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(elem.price)).toFixed(2)}</p><p>&#8377</p><p>${(Number(elem.price)*ram).toFixed(2)}</p>`;
-        document.getElementById("sam_save_amount").innerHTML="";
-        document.getElementById("sam_save_amount").innerHTML=`${Math.floor((ram-1)*100)}%`
-        let img =document.createElement("img")
-            img.src=elem.image;
+    function abc(){     
 
-        document.getElementById("Sam_image_display").append(img)
-            // Sam_image_display
+        // obj_data_get_from_sumit is used in place of temp_check when sumit provide the link and data
+        if(temp_check.product_category=='jewellery')
+        {
+            let ram = (Math.random()*(1.50-1.25)+1.25).toFixed(2);
+
+            document.querySelector("title").innerHTML="";
+            document.querySelector("title").innerHTML=`buy ${temp_check.product}`;
+            document.getElementById("Sam_category_page").innerHTML="";
+            document.getElementById("Sam_category_page").innerHTML=`<i>/ ${temp_check.product_category}</i>`;
+            document.getElementById("Sam_name_product").innerHTML="";
+            document.getElementById("Sam_name_product").innerHTML=`<i>/ ${temp_check.product}</i>`;
+            document.querySelector("#Sam_details_display>h1").innerHTML="";
+            document.querySelector("#Sam_details_display>h1").innerHTML=temp_check.product;
+            document.getElementById("Sam_add_price_here").innerHTML="";
+            document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(temp_check.price)).toFixed(2)}</p><p>&#8377</p><p>${(Number(temp_check.price)*ram).toFixed(2)}</p>`;
+            document.getElementById("sam_save_amount").innerHTML="";
+            document.getElementById("sam_save_amount").innerHTML=`${Math.floor((ram-1)*100)}%`
+            let img =document.createElement("img")
+                img.src=temp_check.image;
+
+            document.getElementById("Sam_image_display").append(img)
+                // Sam_image_display
+        }
     }
-    })
+    abc()
 }
 
 
