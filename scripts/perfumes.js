@@ -307,26 +307,47 @@ function appendJewellery(data){
           
       };
         
+   ///////////////////data to send to shoiab(show data) and wishList////////////////////////
+   let data_to_send ={
+    image:element.image,
+    product: element.title,
+    price:  element.price,
+    sub_category:element.sub_category,
     
-        ///////////////////function showData//////////////////////
-        jewellery_img.onclick=()=>{
-            localStorage.setItem("clickedJewelleryData", JSON.stringify(element))
-
-        window.location.href = '/shopItem.html'
-           
-        }
-        //////////////////////////WishList///////////////////////
-        heart_div.onclick=()=>{
-            localStorage.setItem("wishListData", JSON.stringify(element))
-
-window.location.href = '/wishlist_layout'
-            
-         }
+};
+///////////////////function showData//////////////////////
+jewellery_img.onclick=()=>{
+   showItem(data_to_send)
+}
+//////////////////////////WishList///////////////////////
+heart_div.onclick=()=>{
+    wishList(data_to_send)
+ }
 
 
-    ////////////////shoiab data (show data) end/////////////////////////
-     });
-     ///////////////for loop end here////////////////
+////////////////shoiab data (show data) end/////////////////////////
+});
+///////////////for loop end here////////////////
+
+
+function showItem(data){
+
+localStorage.setItem("clickedJewelleryData", JSON.stringify(data))
+
+window.location.href = '/shopItem.html'
+
+
+}
+
+
+function wishList(data){
+
+localStorage.setItem("wishListData", JSON.stringify(data))
+
+window.location.href = '/wishlist_layout.html'
+
+
+}//////////////oop end here////////////////
 }
 appendJewellery(data)
  ///////////////////appending function ends here///////////////////
