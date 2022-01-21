@@ -17,6 +17,7 @@
   </head>
 
   <body>
+    <div class="nav_bar_container"></div>
     <div id="karthik_wishlist_layout">
       <p style="font-style: italic; color: #938a8a; font-size: 13px">
         Home / My Account
@@ -70,4 +71,13 @@
 
 <script src="./scripts/wishlist_layout.js">
 
+</script>
+<script type="module">
+  // navbar html are imported here
+  import navbar_part from "./components/navbar.js";
+  let navbar_com = await navbar_part();
+  document.querySelector(".nav_bar_container").innerHTML = navbar_com;
+  // navbar logic are imported here
+  import navbar_responsive from "./scripts/header.js";
+  await navbar_responsive();
 </script>
