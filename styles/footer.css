@@ -8,7 +8,7 @@ body{
 	padding:0;
 	box-sizing: border-box;
 }
-.container{
+.containerF{
 	max-width: 1170px;
 	margin:auto;
 }
@@ -85,7 +85,7 @@ ul{
 }
 .social-links{
 	display: flex;
-	margin-left:400px ;
+	margin-left:40px ;
 	display: inline-block;
 	height: 40px;
 	width: 40px;
@@ -98,7 +98,7 @@ ul{
 	transition: all 0.5s ease;
 	display: flex;
 }
-.footer-col .social-links a{
+ .social-links a{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
@@ -110,7 +110,7 @@ ul{
 	color: #ffffff;
 	transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
+ .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
 }
@@ -137,7 +137,7 @@ ul{
 	display:flex;
 }
 
-#img{
+#imgF{
 	height:50px;
 	width:100px;
 	margin-left: 5px;
