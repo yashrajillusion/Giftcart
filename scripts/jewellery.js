@@ -90,7 +90,7 @@ async function getJewellery(url){
         
        let data_to_send ={
             image:element.image,
-            product: element.title,
+            product: element.product,
             price:  element.price,
             sub_category:element.sub_category,
             ///////////////////data to send to shoiab(show data) and wishList////////////////////////

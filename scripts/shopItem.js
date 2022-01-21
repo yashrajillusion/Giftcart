@@ -311,6 +311,15 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
     })
 }
 
+//data recieve from sumit when we click on the perfume and jewellary page
+
+let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
+    console.log("data recieve on click",obj_data_get_from_sumit)
+
+
+
+
+
 // add to cart button functionality
 
 {
@@ -333,6 +342,8 @@ let arr_bhavesh=[]
         product_count:Number(count)
     }
 
+    console.log("bhavesh",obj_transfer_to_bhavesh)
+
     arr_bhavesh.push(obj_transfer_to_bhavesh)
 
     localStorage.setItem("productlist",JSON.stringify(arr_bhavesh))
@@ -342,13 +353,6 @@ let arr_bhavesh=[]
 
 
 {
-
-    // let temp_check ={
-    //     image:'https://media.istockphoto.com/photos/fancy-designer-antique-golden-bracelets-for-woman-fashion-picture-id1277517088?b=1&k=20&m=1277517088&s=170667a&w=0&h=PXTQvh19pESR7mIekh3mJQHWcw2FDRrYcHdxsv9XY-Q=',
-    //     product:'gold with red ruby gems necklace',
-    //     price:"234100",
-    //     product_category:'jewellery'
-    // }
 
     
 

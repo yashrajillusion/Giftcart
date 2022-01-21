@@ -297,21 +297,13 @@ function appendJewellery(data){
             
             
          }
-        
 
-         let data_to_send ={
-          image:element.image,
-          product: element.title,
-          price:  element.price,
-          sub_category:element.sub_category,
-          
-      };
         
    ///////////////////data to send to shoiab(show data) and wishList////////////////////////
    let data_to_send ={
     image:element.image,
-    product: element.title,
-    price:  element.price,
+    product:element.product,
+    price:element.price,
     sub_category:element.sub_category,
     
 };
