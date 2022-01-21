@@ -320,6 +320,7 @@ let arr_bhavesh=[]
 
     // console.log("HII i am adding product to the cart")
     let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
+    console.log("data recieve on click",obj_data_get_from_sumit)
 // localStorage.setItem("clickedJewelleryData", JSON.stringify(data))//by sumit kartik dgeting data
 
 
