@@ -342,36 +342,36 @@ let arr_bhavesh=[]
 
 {
 
-    let temp_check ={
-        image:'https://media.istockphoto.com/photos/fancy-designer-antique-golden-bracelets-for-woman-fashion-picture-id1277517088?b=1&k=20&m=1277517088&s=170667a&w=0&h=PXTQvh19pESR7mIekh3mJQHWcw2FDRrYcHdxsv9XY-Q=',
-        product:'gold with red ruby gems necklace',
-        price:"234100",
-        product_category:'jewellery'
-    }
+    // let temp_check ={
+    //     image:'https://media.istockphoto.com/photos/fancy-designer-antique-golden-bracelets-for-woman-fashion-picture-id1277517088?b=1&k=20&m=1277517088&s=170667a&w=0&h=PXTQvh19pESR7mIekh3mJQHWcw2FDRrYcHdxsv9XY-Q=',
+    //     product:'gold with red ruby gems necklace',
+    //     price:"234100",
+    //     product_category:'jewellery'
+    // }
 
     
 
     function abc(){     
 
         // obj_data_get_from_sumit is used in place of temp_check when sumit provide the link and data
-        if(temp_check.product_category=='jewellery')
+        if(obj_data_get_from_sumit.sub_category=='perfumes')
         {
             let ram = (Math.random()*(1.50-1.25)+1.25).toFixed(2);
 
             document.querySelector("title").innerHTML="";
-            document.querySelector("title").innerHTML=`buy ${temp_check.product}`;
+            document.querySelector("title").innerHTML=`buy ${obj_data_get_from_sumit.product}`;
             document.getElementById("Sam_category_page").innerHTML="";
-            document.getElementById("Sam_category_page").innerHTML=`<i>/ ${temp_check.product_category}</i>`;
+            document.getElementById("Sam_category_page").innerHTML=`<i>/ ${obj_data_get_from_sumit.sub_category}</i>`;
             document.getElementById("Sam_name_product").innerHTML="";
-            document.getElementById("Sam_name_product").innerHTML=`<i>/ ${temp_check.product}</i>`;
+            document.getElementById("Sam_name_product").innerHTML=`<i>/ ${obj_data_get_from_sumit.product}</i>`;
             document.querySelector("#Sam_details_display>h1").innerHTML="";
-            document.querySelector("#Sam_details_display>h1").innerHTML=temp_check.product;
+            document.querySelector("#Sam_details_display>h1").innerHTML=obj_data_get_from_sumit.product;
             document.getElementById("Sam_add_price_here").innerHTML="";
-            document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(temp_check.price)).toFixed(2)}</p><p>&#8377</p><p>${(Number(temp_check.price)*ram).toFixed(2)}</p>`;
+            document.getElementById("Sam_add_price_here").innerHTML=`<p>&#8377</p><p>${(Number(obj_data_get_from_sumit.price)).toFixed(2)}</p><p>&#8377</p><p>${(Number(obj_data_get_from_sumit.price)*ram).toFixed(2)}</p>`;
             document.getElementById("sam_save_amount").innerHTML="";
             document.getElementById("sam_save_amount").innerHTML=`${Math.floor((ram-1)*100)}%`
             let img =document.createElement("img")
-                img.src=temp_check.image;
+                img.src=obj_data_get_from_sumit.image;
 
             document.getElementById("Sam_image_display").append(img)
                 // Sam_image_display

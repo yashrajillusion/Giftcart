@@ -298,6 +298,14 @@ function appendJewellery(data){
             
          }
         
+
+         let data_to_send ={
+          image:element.image,
+          product: element.title,
+          price:  element.price,
+          sub_category:element.sub_category,
+          
+      };
         
     
         ///////////////////function showData//////////////////////
