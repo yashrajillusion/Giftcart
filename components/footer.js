@@ -77,7 +77,6 @@ function footer(){
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBU3ScCzsLZtuCB19Wny02nX4VvjLdlW9AcPj6XQgmjHFAvtG441MDRhRYslI-571qXnY&usqp=CAU" id="imgF" >  
       </div>
     </div>
-</div>
 </footer>
 `
 }
