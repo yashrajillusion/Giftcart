@@ -35,7 +35,7 @@ body {
  margin-left: 4px;
 }
 button{
- margin:1rem;
+ /* margin:1rem; */
  outline:none;
  width:45px;
  height:45px;

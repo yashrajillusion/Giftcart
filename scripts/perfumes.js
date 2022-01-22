@@ -224,7 +224,7 @@ let jewellery_div = document.getElementById("jewellery_container")
 function appendJewellery(data){
      console.log(data)
      ///////////////////for loop start/////////////////////////
-     data.forEach(element => {
+     data.forEach((element,index) => {
          let div = document.createElement("div")
          div.setAttribute("class","divmain")
 
@@ -313,7 +313,7 @@ jewellery_img.onclick=()=>{
 }
 //////////////////////////WishList///////////////////////
 heart_div.onclick=()=>{
-    wishList(data_to_send)
+    wishList(data[index])
  }
 
 
@@ -331,16 +331,17 @@ window.location.href = '/shopItem.html'
 
 }
 
+}
+let wish = JSON.parse(localStorage.getItem('wishListData')) || [];
 
 function wishList(data){
-
-localStorage.setItem("wishListData", JSON.stringify(data))
+  wish.push(data);
+localStorage.setItem("wishListData", JSON.stringify(wish));
 
 window.location.href = '/wishlist_layout.html'
 
 
 }//////////////oop end here////////////////
-}
 appendJewellery(data)
  ///////////////////appending function ends here///////////////////
 ///////////////////////script for jewelry data ends here///////////////////////////
