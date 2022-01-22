@@ -18,7 +18,6 @@ body {
 
   #wishlist_dashboard {
     width: 22%;
-    height: 340px;
     background-color: #f6f6f6;
     padding: 1%;
   }
@@ -39,7 +38,7 @@ body {
   #dashboard_opts>li>a{
     text-decoration: none;
     color: black;
-    line-height: 35px;
+    line-height: 30px;
   }
 
   #wishlist_right {
@@ -147,6 +146,8 @@ body {
   }
   #dashboard_opts > li {
     font-size: 14px;
+    list-style: none;
+    margin-left: -5px;
 
   }
   #dashboard_opts{

@@ -15,7 +15,7 @@ function footer(){
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <div id="rdiv">
-        <a href="#"><i class="fa fa-youtube-play"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
 </div>
