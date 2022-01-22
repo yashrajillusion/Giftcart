@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 
 .containerF{
 	width: 99%;
@@ -6,13 +6,8 @@
 	display: block;
 }
 .row{
-	display: block;
-	width: 100%;
-	border: 1px solid green;
-}
-.row>div:last-child {
-	display: block;
-	background-color: green;
+	display: flex;
+	width: 99%;
 }
 ul{
 	list-style: none;
@@ -35,7 +30,6 @@ ul{
 }
 .footer-col{
    width: 100%;
-   border: 1px solid black;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -76,7 +70,7 @@ ul{
 	display: flex;
 	padding: 0% 35%;
 	height: 40px;
-	width: 100%;
+	width: 99%;
 	background-color: rgba(255,255,255,0.2);
 	margin:auto;
 	color: #ffffff;
@@ -99,7 +93,7 @@ ul{
 	color: #24262b;
 	background-color: #ffffff;
 }
-#email{
+#email_footer{
 	width: 80%;
 	height: 40px;
 	background: transparent;
@@ -110,27 +104,26 @@ ul{
 	background: red;
 	color: seashell;
 	margin-top: 8px;
-	width:120px;
 	height:35px;
 }
 #payment{
 	
 	display:flex;
-	width:100%;
+	width:50%;
+	margin: auto;
 	height: 40px;
-	padding-left: 37%;
 	gap: 1.5%;
 	margin-top: 3%;
 	
 	
 }
 #payment>div{
-	width: 5%;
+	flex: 1;
 }
 
 #imgF{
 	height:100%;
-	width:120%;
+	width:100%;
 	
 }
 

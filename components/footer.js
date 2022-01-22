@@ -53,6 +53,7 @@ function footer(){
         <button id="sub">SUBSCRIBE</button>
         
    </div>
+   </div>
    <div id="payment">
     <div >
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Visa_%28company%29_logo.svg/3072px-Former_Visa_%28company%29_logo.svg.png" id="imgF" >  
@@ -76,7 +77,6 @@ function footer(){
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBU3ScCzsLZtuCB19Wny02nX4VvjLdlW9AcPj6XQgmjHFAvtG441MDRhRYslI-571qXnY&usqp=CAU" id="imgF" >  
       </div>
     </div>
-</div>
 </footer>
 `
 }
