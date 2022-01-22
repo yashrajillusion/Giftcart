@@ -244,7 +244,7 @@ async function navbar_responsive(){
       document.querySelector("#hello_btn").textContent = `Hello, ${str}`;
     }
     // search functionality
-    const get_url = `http://127.0.0.1:5001/api/products`;
+    const get_url = `https://giftcartbackendapp.herokuapp.com/api/products`;
     let search_item = document.querySelector("#prod_search_input");
     let product;
     search_item.onkeypress = (event) => {
