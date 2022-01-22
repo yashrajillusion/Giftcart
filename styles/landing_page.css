@@ -767,6 +767,7 @@ form label {
   position: absolute;
   background-color: white;
   display: none;
+  z-index: 10;
 }
 #search_result_div > div {
   display: flex;

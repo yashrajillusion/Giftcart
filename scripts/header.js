@@ -254,7 +254,7 @@ async function navbar_responsive(){
       }
     };
   
-    search_item.oninput = () => debounce(getDataFromDataBase, 1000);
+    search_item.oninput = () => debounce(getDataFromDataBase, 500);
   
     var id;
     function debounce(func, delay) {
