@@ -428,6 +428,7 @@ form label {
   padding: 0px;
   height: 100%;
 }
+
 .right_header .account div {
   display: flex;
   margin-right: 15px;
@@ -439,7 +440,10 @@ form label {
 .fas {
   font-size: 20px;
 }
-.cart:hover {
+.cart a {
+  color: black;
+}
+.cart a:hover {
   color: red;
   cursor: pointer;
 }
@@ -474,6 +478,7 @@ form label {
 .mid_nav {
   background-color: #f10102;
   height: 50px;
+  z-index: 2;
 }
 .cat_nav {
   margin: auto;
@@ -519,6 +524,7 @@ form label {
   display: flex;
   justify-content: space-between;
   visibility: hidden;
+  z-index: 2;
 }
 
 .cat_opt div {
@@ -589,6 +595,7 @@ form label {
 }
 .cat_birth {
   width: 500px;
+  z-index: 2;
 }
 .valentine {
   visibility: hidden;
@@ -605,6 +612,7 @@ form label {
   width: 120px;
   padding: 10px;
   right: 24%;
+  z-index: 2;
 }
 .sticky {
   position: fixed;
@@ -716,7 +724,7 @@ form label {
 .gift_now_btn {
   background-color: burlywood;
   color: white;
-  width: 75px;
+  /* width: 75px; */
   display: flex;
   align-items: center;
   padding: 4px 10px;
