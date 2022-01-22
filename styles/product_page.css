@@ -119,40 +119,41 @@
 
 #head{
     display:flex;
-    width:1200px;
     margin-bottom: 10px;
+    width: 98%;
 }
 h2{
-    margin-left: 60px;
-    margin-top: 50px;
+    margin: 0%;
+    margin-left: 4%;
+    margin-top: 2%;
 }
 #line{
-    width:400px;
+    width:35%;
     height:0;
     border:solid 1px grey;
     background: grey;
-    margin-left: 30px;
-    margin-top: 60px;
+    margin-left: 2%;
+    margin-top: 3%;
     border-radius: 12px;
 }
 h3{
-    margin-left: 50px;
-    margin-top: 50px;
+    margin-left: 2%;
+    margin-top: 3%;
     color:red;
 }
 .main{
     display: grid;
     
     grid-template-columns: repeat(2,1fr);
-    width: 100%;
-    /* height:500px; */
-   /* margin-left: 125px; */
-   padding: 0% 5%;
+    width: 90%;
+    margin: auto;
       grid-gap:0.7%;
+      margin-bottom: 1%;
 }
 .main>div{
    /* border:1px solid black; */
-    width: 100%;
+    width: 99%;
+    height: 98%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 #img{
@@ -161,18 +162,19 @@ h3{
     opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-}
+} 
+
 #img:hover{
     opacity: .5;
 }
 .box{
     display:grid;
-    /* border: 1px solid black; */
     grid-template-columns: repeat(3,1fr);
-    width:100%;
+    width:97%;
+    margin: auto;
     height: 240px;
-    padding:0% 1%;
     grid-gap: 0.7%;
+    
     /* margin-left: 70px; */
 }
 .box>div{
@@ -192,19 +194,17 @@ h3{
 }
         #Ms_container_div {
             display: grid;
+            margin: auto;
+            margin-top: 1%;
             grid-template-columns: repeat(5,1fr);
-            width: 100%;
-            height: 370px;
-            margin-top: 10px;
-             gap: 1.5%; 
-            padding: 0% 5%;
+            width: 90%;
+            margin-bottom: 3%;
+            gap: 1.5%; 
         }
         .Ms_item_div {
-            padding: 0px 7px;
-            /* height: 340px; */
-            width: 100%;
-            /* margin-left: 5px; */
-            /* border: 1px solid black; */
+            width: 97%;
+            padding: 2%;
+            padding-bottom: 15%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
         .Ms_item_div:hover {
@@ -213,7 +213,6 @@ h3{
         }
         .Ms_image_div {
             padding-top: 3%;
-        
             position: relative;
         }
         .Ms_image_div>img{
@@ -262,7 +261,7 @@ h3{
         }
         .Ms_text_div_2 {
             display: flex;
-            margin: 0%;
+            margin: 1%;
             width: 100%;
             line-height: 18px;
             margin-bottom: 4%;

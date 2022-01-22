@@ -49,9 +49,10 @@ function footer(){
        </div>
        <div class="footer-col">
         <h4>NEWSLETTER</h4>
-        <input type="email" id="email" placeholder="Your email address">
+        <input type="email" id="email_footer" placeholder="Your email address">
         <button id="sub">SUBSCRIBE</button>
         
+   </div>
    </div>
    <div id="payment">
     <div >
@@ -76,7 +77,6 @@ function footer(){
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBU3ScCzsLZtuCB19Wny02nX4VvjLdlW9AcPj6XQgmjHFAvtG441MDRhRYslI-571qXnY&usqp=CAU" id="imgF" >  
       </div>
     </div>
-</div>
 </footer>
 `
 }
