@@ -87,14 +87,12 @@ async function getJewellery(url){
             
          }
         
-        
-       let data_to_send ={
+         let data_to_send ={
             image:element.image,
             product: element.product,
             price:  element.price,
             sub_category:element.sub_category,
-            ///////////////////data to send to shoiab(show data) and wishList////////////////////////
-      
+            
         };
         ///////////////////function showData//////////////////////
         jewellery_img.onclick=()=>{
@@ -102,35 +100,29 @@ async function getJewellery(url){
         }
         //////////////////////////WishList///////////////////////
         heart_div.onclick=()=>{
-            wishList(data_to_send)
-         }
-
-
-    ////////////////shoiab data (show data) end/////////////////////////
-     });
-     ///////////////for loop end here////////////////
-
-
-     function showItem(data){
+          arr.push(data[index])
+          localStorage.setItem("wishListData",JSON.stringify(arr))
+          window.location.href = "/wishlist_layout.html"
+        }
+        
+        
+        ////////////////shoiab data (show data) end/////////////////////////
+        });
+        ///////////////for loop end here////////////////
+        
+        
+        function showItem(data){
         
         localStorage.setItem("clickedJewelleryData", JSON.stringify(data))
-
+        
         window.location.href = '/shopItem.html'
-
         
-    }
-
-    
-    function wishList(data){
         
-        localStorage.setItem("wishListData", JSON.stringify(data))
-
-        window.location.href = '/wishlist_layout.html'
-
+        }
         
-    }
-     
- }
+        
+        /////////////oop end here////////////////
+        }
  ///////////////////appending function ends here///////////////////
 
  export{getJewellery,appendJewellery}
