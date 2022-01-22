@@ -164,7 +164,7 @@ async function navbar_part(){
           <a href="#"><h3>Hatke Gifts</h3></a>
           <ul>
             <a href="#"><li>Home & Living</li></a>
-            <a href="#"><li>Jewellery</li></a>
+            <a href="./jewellery.html"><li>Jewellery</li></a>
             <a href="#"><li>Kids</li></a>
             <a href="#"><li>Love & Romance</li></a>
           </ul>
@@ -173,7 +173,7 @@ async function navbar_part(){
         <div>
           <ul>
             <a href="#"><li>Naughty</li></a>
-            <a href="#"><li>Perfumes</li></a>
+            <a href="./perfume.html"><li>Perfumes</li></a>
           </ul>
           <a href="#"><h3>Personalised Gifts</h3></a>
           <ul>
