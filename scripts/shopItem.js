@@ -56,12 +56,14 @@ document.getElementById("Sam_name_product").addEventListener("click",function ()
         {
             console.log("i am visible")
             document.getElementById("sam_delievry_pincode_check").style.display ="block";
+            document.getElementById("sam_elaborate_margin").style.marginTop="220px"
         }
         if(count ==2)
         {
             console.log("i am Invisible")
             document.getElementById("sam_delievry_pincode_check").style.display ="none";
             document.getElementById("sam_alert_append_div").style.display="none"
+            document.getElementById("sam_elaborate_margin").style.marginTop="90px"
             count =0;
         }
 
