@@ -1046,6 +1046,11 @@
   import footer from "./components/footer.js";
     let footerDiv=document.getElementById("footer");
     footerDiv.innerHTML=footer();
+    let getcart = JSON.parse(localStorage.getItem('productlist'));
+
+    console.log(getcart.length)
+    let cart_count = document.getElementById('cart_cc');
+    cart_count.textContent = `${getcart.length}`;
 </script>
 
 

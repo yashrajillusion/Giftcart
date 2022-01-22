@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .containerF{
-	width: 99%;
+	width: 100%;
 	margin:auto;
-	display: block;
-	display:flex
 }
 .row{
 	/* display: block; */
 	display: flex;
-	width: 100%;
-	border: 1px solid green;
+	width: 85%;
+	margin: auto;
+	justify-content: space-between;
 }
 .row>div {
-	/* display: block; */
-	width:25%;
-	background-color: green;
+	/* width:30%; */
+	flex: 1;
 }
 ul{
 	list-style: none;
@@ -31,14 +29,15 @@ ul{
 	width:99%;
 	height: 70px;
 }
-
-.footer{
+#footer {
+	width: 100%;
+}
+.footer2{
+	width: 100%;
 	background-color: #24262b;
-    /* padding: 70px 0; */
 }
 .footer-col{
-   width: 100%;
-   border: 1px solid black;
+   width: 99%;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -77,14 +76,15 @@ ul{
 }
 .social-links{
 	display: flex;
-	padding: 0% 35%;
 	height: 40px;
-	width: 100%;
-	background-color: rgba(255,255,255,0.2);
+	width: 29%;
 	margin:auto;
 	color: #ffffff;
 	transition: all 0.5s ease;
 	
+}
+.footer-col>ul>li {
+	margin-left: -11%;
 }
  .social-links a{
 	display: inline-block;
@@ -102,7 +102,7 @@ ul{
 	color: #24262b;
 	background-color: #ffffff;
 }
-#email{
+#email_footer{
 	width: 80%;
 	height: 40px;
 	background: transparent;
@@ -119,16 +119,17 @@ ul{
 #payment{
 	
 	display:flex;
-	width:100%;
+	width:50%;
 	height: 40px;
-	padding-left: 37%;
 	gap: 1.5%;
+	margin: auto;
 	margin-top: 3%;
 	
 	
 }
 #payment>div{
-	width: 5%;
+	flex: 1;
+	margin-left: 2%;
 }
 
 #imgF{

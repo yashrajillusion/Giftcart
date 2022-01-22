@@ -54,7 +54,7 @@ async function navbar_part(){
           <div class="cart">
           <a href="./cart.html">
             <span><i class="fas fa-shopping-cart"></i></span>
-            <span class="cart-count">50</span>
+            <span id="cart_cc" class="cart-count">50</span>
             </a>
           </div>
           <div class="nav_btn">
@@ -66,10 +66,12 @@ async function navbar_part(){
     <!-- top nav search -->
     <div class="mid_search">
       <div class="gift_logo">
+        <a href="./index.html">
         <img
           src="https://style.giftcart.com/pub/media/logo/stores/1/GC-logo-with-punchline.png"
           alt=""
         />
+        </a>
       </div>
       <div class="search_bar">
         <div class="search_mic">
@@ -472,7 +474,7 @@ async function navbar_part(){
       <ul id="karthik_d">
         <li><a href="#">My Account</a></li>
         <li><a href="#">My Orders</a></li>
-        <li><a href="#">My Wish List</a></li>
+        <li><a href="./wishlist_layout.html">My Wish List</a></li>
         <li><a href="#" id="karthik_createAct_click">Create Account</a></li>
         <li><a href="#" id="karthik_sigin_click">Sign In</a></li>
       </ul>

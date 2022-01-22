@@ -1,7 +1,8 @@
 function footer(){
-    return `<div id="RED">
+    return `
+    <div id="RED">
 		
-    <div class="social-links">
+      <div class="social-links">
         <div id="rdiv">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         </div>
@@ -21,7 +22,7 @@ function footer(){
 </div>
 
 
-<footer class="footer">
+<footer class="footer2">
 
 <div class="containerF">
    <div class="row">
@@ -52,7 +53,7 @@ function footer(){
         <input type="email" id="email_footer" placeholder="Your email address">
         <button id="sub">SUBSCRIBE</button>
         
-   </div>
+      </div>
    </div>
    <div id="payment">
     <div >
