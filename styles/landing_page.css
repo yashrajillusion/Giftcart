@@ -82,33 +82,62 @@ body {
 
 #dashboard_dropdown {
   width: 10%;
-  float: right;
+  right: 12px;
+  position: absolute;
+  top: 52px;
+  background-color: white;
+
   margin-right: 6%;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 1, 0.3) 0px 1px 3px -1px;
-
+}
+.vissible_toggle {
   display: none;
 }
 
 #karthik_d {
   margin-left: 10%;
-  display: none;
+  /* display: none; */
+}
+#karthik_d {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+#karthik_d a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 25px;
+}
+#karthik_d li :hover {
+  color: red;
+}
+#karthik_d li {
+  text-decoration: none;
+  list-style: none;
 }
 
-#karthik_count {
+/* #karthik_count {
   width: 5%;
   background-color: red;
   color: white;
   border-radius: 50%;
   padding: 000.1rem 000.2rem;
-}
+} */
 
 #karthik_create_container {
+  background-color: white;
   width: 39%;
   height: 570px;
   margin-left: 30%;
   display: none;
+  position: absolute;
+  top: 7%;
+  font-family: "Lato", arial, tahoma;
+  z-index: 10;
 }
 
 #create_header {
@@ -132,6 +161,9 @@ body {
   border: 0;
   color: black;
   font-size: large;
+  font-size: 25px;
+  margin-top: 7px;
+  margin-right: 20px;
 }
 #create_header > h2 {
   padding-right: 38%;
@@ -151,12 +183,18 @@ body {
 
 #div1 {
   padding-bottom: 4%;
+  display: flex;
+  gap: 10px;
+}
+#back_click {
+  color: black;
+  text-decoration: none;
 }
 
 #div1 > input {
   padding: 10px 0px;
   padding-right: 6%;
-
+  margin-right: 25px;
   border: 1px solid #c7c4c4;
 }
 
@@ -200,16 +238,34 @@ body {
   color: white;
   width: 90%;
   height: 40px;
+  margin-bottom: 20px;
 }
 
 /*----------------------------------------------- login -----------------------------------*/
-
+#sdiv1 {
+  margin-top: 20px;
+}
 #karthik_signin_container {
   margin-left: 30%;
 
   width: 40%;
   height: 659px;
   display: none;
+  background-color: white;
+  z-index: 10;
+  margin-left: 30%;
+  position: absolute;
+  top: 7%;
+}
+.bg-model {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  position: fixed;
+  top: 0px;
+  display: none;
+  z-index: 1;
 }
 
 #sign_header {
@@ -224,10 +280,20 @@ body {
 }
 
 #cross_btn {
+  /* background-color: transparent;
+  border: 0;
+  color: black;*/
+  margin-left: 70%;
   background-color: transparent;
   border: 0;
   color: black;
-  margin-left: 70%;
+  font-size: large;
+  font-size: 25px;
+  margin-top: 7px;
+  margin-right: 20px;
+}
+form label {
+  font-family: "Lato", arial, tahoma;
 }
 
 #signin_details {
@@ -236,11 +302,21 @@ body {
 }
 
 #sdiv1 > input {
-  width: 97%;
+  width: 95%;
+  padding: 8px;
+  border-radius: 0px;
+  border: 1px solid #e1e1e1;
+  margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 #sdiv2 > input {
-  width: 97%;
+  width: 95%;
+  padding: 8px;
+  border-radius: 0px;
+  border: 1px solid #e1e1e1;
+  margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 #sdiv2 {
@@ -285,6 +361,7 @@ body {
 #sigin_options > p {
   text-align: center;
 }
+
 /* this is the css of top nav */
 .top_header {
   border: 1px solid rgb(209, 207, 207);
@@ -353,6 +430,7 @@ body {
   padding: 0px;
   height: 100%;
 }
+
 .right_header .account div {
   display: flex;
   margin-right: 15px;
@@ -364,7 +442,10 @@ body {
 .fas {
   font-size: 20px;
 }
-.cart:hover {
+.cart a {
+  color: black;
+}
+.cart a:hover {
   color: red;
   cursor: pointer;
 }
@@ -564,6 +645,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   transition: 0.5s linear;
+  z-index: 5;
 }
 .active {
   width: 270px;
@@ -645,7 +727,7 @@ body {
 .gift_now_btn {
   background-color: burlywood;
   color: white;
-  width: 75px;
+  /* width: 75px; */
   display: flex;
   align-items: center;
   padding: 4px 10px;
@@ -676,4 +758,27 @@ body {
 }
 .stickers img {
   height: 100%;
+}
+#search_result_div {
+  border: 2px solid rgb(187, 184, 184);
+  width: 616px;
+  height: auto;
+  position: absolute;
+  background-color: white;
+  display: none;
+}
+#search_result_div > div {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  font-family: "Lato", arial, tahoma;
+  font-weight: normal;
+  width: 600px;
+  border-bottom: 2px solid rgb(198, 197, 197);
+  margin: auto;
+  margin-top: 10px;
+}
+#search_result_div img {
+  width: 100px;
+  cursor: pointer;
 }
