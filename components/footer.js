@@ -53,6 +53,7 @@ function footer(){
         <button id="sub">SUBSCRIBE</button>
         
    </div>
+   </div>
    <div id="payment">
     <div >
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Visa_%28company%29_logo.svg/3072px-Former_Visa_%28company%29_logo.svg.png" id="imgF" >  
