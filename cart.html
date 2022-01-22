@@ -40,7 +40,7 @@
                     </tbody>
                 </table>
                 <div class="Bs_continue_btn_div">
-                    <a href="./cart.html"><button>CONTINUE SHOPPING</button></a>
+                    <a href="./perfume.html"><button>CONTINUE SHOPPING</button></a>
                 </div>
             </div>
         </div>
@@ -78,61 +78,14 @@
     // navbar logic are imported here
     import navbar_responsive from "./scripts/header.js";
     await navbar_responsive();
-  </script>
-  
-
-
+</script>
 <script type="module">
-
-    var obj = [
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242',
-            cut_price: '2222'
-        },
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242'
-        },
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242'
-        },
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242'
-        },
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242',
-            discount : '10',
-            sub_category : '',
-        },
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242'
-        },
-        {
-            image : 'https://www.orra.co.in/pub/media/wysiwyg/Crown-Star.png',
-            product : 'prdouct name will be her dfkdnbdi idfbeiudnk eifiufn',
-            price : '23242'
-        },
-    ]
-    
-    //  localStorage.setItem('productlist',JSON.stringify(obj));
 
     var arr = JSON.parse(localStorage.getItem('productlist')) || [];
     
     let main_div = document.getElementById('Bs_table_data');
 
-    
-    import displayTable from "./scripts/cart2.js";
+    import displayTable from "./components/cart2.js";
     
     let total2 = document.querySelector('.Bs_total_price2');
     async function display() {
@@ -153,12 +106,21 @@
     let price = 1000;
     let discount = 10;
     let value = price/discount;
-    console.log(value)
     display();
+
+    
+    let chee = document.getElementById('Bs_checkout_list_div2');
+    chee.addEventListener('click',()=>{
+        let dp2 = document.getElementsByClassName('product_count');
+        for(let i = 0; i<dp2.length; i++){
+            arr[i].product_count = dp2[i].value;
+        }
+        localStorage.setItem('productlist',JSON.stringify(arr));
+    })
+
 
 
     let btnss = document.querySelectorAll('#Bs_update_btn');
-    console.log(btnss)
     for(let i = 0; i<btnss.length; i++){
         btnss[i].addEventListener('click',dd);
 
@@ -169,10 +131,8 @@
         for(let i = 0; i<total_price.length; i++){
         tt += Number(total_price[i].textContent);
         }
-        console.log(tt)
         total2.innerText = null;
         total2.innerText = tt;
-        console.log(total2.textContent);
         localStorage.setItem('total_price',JSON.stringify(tt));
     }
 </script>

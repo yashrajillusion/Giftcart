@@ -100,7 +100,7 @@ body {
     padding: 2px 5px;
   }
 
-  #wishlist_add_to_cart {
+  .wishlist_add_to_cart {
     background-color: red;
     border: 0;
     color: white;

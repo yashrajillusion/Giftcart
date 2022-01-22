@@ -37,8 +37,7 @@
   // localStorage.setItem("productlist", JSON.stringify(obj2));
 
   // localStorage.setItem("wishListData", JSON.stringify(obj));
-  let arr = JSON.parse(localStorage.getItem("wishListData")) || [];
-  console.log(arr);
+  let arr = JSON.parse(localStorage.getItem("wishListData"));
 
   appendWishlist(arr);
   function appendWishlist(items) {
@@ -74,14 +73,14 @@
               ><br />
               <label for="">Qty</label><br />
               <input type="number" id="item_qty" value="1" /><br />
-              <button id="wishlist_add_to_cart">ADD TO CART</button><br />
+              <button class="wishlist_add_to_cart">ADD TO CART</button><br />
 
             </div>
           </div>
           
       `;
       let div2 = document.createElement("div");
-
+      
       let edit_icon = document.createElement("i");
       edit_icon.setAttribute("id", "ka_edit");
       edit_icon.innerHTML = `<i class="fas fa-edit"></i>`;
@@ -98,19 +97,26 @@
       remove_btn.addEventListener("click", function () {
         console.log("here", index);
         items.splice(index, 1);
-        localStorage.setItem("wishListData", JSON.stringify("items"));
+        localStorage.setItem("wishListData", JSON.stringify(items));
         appendWishlist(items);
       });
     });
   }
   let add_allto_cart = document.getElementById("add_to_cartall");
   add_allto_cart.addEventListener("click", function () {
-    let arr2 = JSON.parse(localStorage.getItem("productlist"));
-    let arr = JSON.parse(localStorage.getItem("wishListData"));
+    let arr2 = JSON.parse(localStorage.getItem("productlist")) || [];
+    let arr = JSON.parse(localStorage.getItem("wishListData")) || [];
     while (arr.length !== 0) {
       arr2.push(arr[0]);
       arr.shift();
     }
+    localStorage.setItem('productlist', JSON.stringify(arr2));
     localStorage.setItem("wishListData", JSON.stringify(arr));
     console.log(arr2);
+    window.location.href = "./cart.html";
   });
+
+  // let single_add_to_cart = document.getElementsByClassName('wishlist_add_to_cart');
+  // single_add_to_cart.forEach.addEventListener('click',function(){
+  //   console.log('here')
+  // })

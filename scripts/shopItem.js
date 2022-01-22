@@ -328,8 +328,8 @@ let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryDa
 // add to cart button functionality
 
 {
-let arr_bhavesh=[]
 
+var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  transfer data 
     document.getElementById("sam_add_to_cart").addEventListener("click",()=>{
 
     // console.log("HII i am adding product to the cart")
@@ -347,12 +347,10 @@ let arr_bhavesh=[]
         product_count:Number(count)
     }
 
-    console.log("bhavesh",obj_transfer_to_bhavesh)
 
-    arr_bhavesh.push(obj_transfer_to_bhavesh)
+    arr.push(obj_transfer_to_bhavesh)
 
-    localStorage.setItem("productlist",JSON.stringify(arr_bhavesh))
-// var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  transfer data 
+    localStorage.setItem("productlist",JSON.stringify(arr))
     })
 }
 
