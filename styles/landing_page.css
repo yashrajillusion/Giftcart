@@ -570,6 +570,7 @@ form label {
   display: flex;
   justify-content: space-between;
   visibility: hidden;
+  z-index: 5;
 }
 
 .cat_aniversary ul {
