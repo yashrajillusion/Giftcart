@@ -20,7 +20,7 @@
     display: flex;
     width: 88%;
     margin: auto;
-    height: 2000px;
+    padding-bottom: 50px;
 }
 #Bs_product_list {
     flex: 4;
