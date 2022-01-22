@@ -54,7 +54,7 @@ async function navbar_part(){
           <div class="cart">
           <a href="./cart.html">
             <span><i class="fas fa-shopping-cart"></i></span>
-            <span id="cart_cc" class="cart-count">50</span>
+            <span id="cart_cc" class="cart-count">0</span>
             </a>
           </div>
           <div class="nav_btn">
