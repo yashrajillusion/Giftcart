@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Gifting Ideas from Online Gift Store India | Latest Gift Items From
+      Giftcart.com
+    </title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://style.giftcart.com/pub/media/favicon/stores/1/16x16.png"
+    />
+    <!-- <link rel="stylesheet" type="text/css" media="all"
+        href="https://style.giftcart.com/pub/static/_cache/merged/ba33a3ae125fe1c0ffec40f2b0073279.min.css" /> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+    <link rel="stylesheet" href="styles/landing_page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav_bar_container"></div>
+
+    <div style="height: 1000px; border: 2px solid red"></div>
+  </body>
+</html>
+<script type="module">
+  // navbar html are imported here
+  import navbar_part from "./components/navbar.js";
+  let navbar_com = await navbar_part();
+  document.querySelector(".nav_bar_container").innerHTML = navbar_com;
+  // navbar logic are imported here
+  import navbar_responsive from "./scripts/header.js";
+  await navbar_responsive();
+</script>
