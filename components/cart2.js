@@ -70,9 +70,9 @@ function displayTable (items,location) {
         td4_div_button.addEventListener('click',()=>{
             let valueof = td4_div_input.value;
             let price = Number(elem.price);
-            let price2 = -price;
+            let price2 = -Number(price);
             array.push(Number(price2))
-            let ans = valueof*price;
+            let ans = Number(valueof)*Number(price);
             td5.innerText = ans;
             array.push(Number(ans))
         })
@@ -82,8 +82,8 @@ function displayTable (items,location) {
 
         let td5 = document.createElement('td');
         td5.setAttribute('class','Bs_product_price2')
-
-        td5.innerText = `₹${elem.price}`;
+        let valueof = td4_div_input.value;
+        td5.innerText = `${elem.price*valueof}`;
         row.append(td1,td2,td3,td4,td5);
         location.append(row);
     })
