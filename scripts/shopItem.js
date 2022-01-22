@@ -1,19 +1,18 @@
-// let x =document.getElementById("sam_X")
-//     x.addEventListener("click","");
+
+
 
 document.getElementById("sam_X").addEventListener("click",function disappearDiv()
 {
-    // event.preventDefault()
     document.getElementById("Sam_alert_popup_message").style.display ="none";
 })
 
-//eventlister for home page 
+//>>>>>>> click on home page <<<<<<<<<// lines 9 to 13
 document.getElementById("Sam_home_link").addEventListener("click",function ()
 {
     window.location.href ="/index.html"
 })
 
-//evetlister for jewelllery page
+//>>>>>>>>> click on product cateogy <<<<<<// lines 15 to 28
 document.getElementById("Sam_category_page").addEventListener("click",function (){
     let cat =document.getElementById("Sam_category_page").innerHTML;
     console.log(cat)
@@ -21,9 +20,14 @@ document.getElementById("Sam_category_page").addEventListener("click",function (
     {
         window.location.href="/jewellery.html"
     }
+    if(cat =='<i>/ perfumes</i>')
+    {
+        window.location.href="/perfume.html"
+
+    }
 })
 
-//eventlistenre for product name 
+//>>>>>>>>> eventlistenre for product name so that one can return to jewellary or perfumes page <<<<<<<<<<<// lines 30 to 43
 document.getElementById("Sam_name_product").addEventListener("click",function (){
     let cat =document.getElementById("Sam_category_page").innerHTML;
     console.log(cat)
@@ -39,7 +43,7 @@ document.getElementById("Sam_name_product").addEventListener("click",function ()
 })
 
 
-//PINCODE CHECK HIDDEN DIVES FUNCTIONALITY START HERE
+//>>>>>>>>> PINCODE CHECK HIDDEN DIVES FUNCTIONALITY START HERE <<<<<<<<<<<<// lines 46 to 69
 
 {
 
@@ -58,14 +62,13 @@ document.getElementById("Sam_name_product").addEventListener("click",function ()
             console.log("i am Invisible")
             document.getElementById("sam_delievry_pincode_check").style.display ="none";
             document.getElementById("sam_alert_append_div").style.display="none"
-            // window.location.reload()
             count =0;
         }
 
     }
 }
 
-// CHECK THE PICODE
+//>>>>>>>>> CHECK THE PICODE <<<<<<<<<<<<<// lines 71 to 133
 
 {
 let count =0;
@@ -128,25 +131,24 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
 
 }
 
-
-
-
-// KEY VALUES JS CODES
-// elaborate section JS codes
+//>>>>>>>>>>  KEY VALUES JS CODES   <<<<<<<<<<<<// lines 134 to 328
 {
     let count =0;
 
-    // key value data entry
+    //>>>>>>>>>>> key value data entry <<<<<<<<<// lines 138 to 188
     document.getElementById("sam_keyvalue").addEventListener("click",function(){
         document.getElementById("sam_keyfeatures").innerHTML="";
         count++;
+        let cat =document.getElementById("Sam_category_page").innerHTML;  // to import values ot the KEY values after knowing which thing is added to the page
         if(count==1)
         {
             document.getElementById("sam_keyfeatures").style.display ="block"
             let div =document.createElement("div")
                 div.setAttribute("id","sam_appending_data_div")
                 // div.innerHTML= keyValues() ;
-                div.innerHTML =`<ul>
+                if( cat =='<i>/ jewellery</i>')
+                {
+                    div.innerHTML =`<ul>
                                     <ul>
                                         <ul>
                                             <li style="color:red"><div id="sam_bullet_change">Material: Gold</div></li>
@@ -159,8 +161,25 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
                                         </ul>
                                     </ul>
                                 </ul>`
+                }
+                if(cat =='<i>/ perfumes</i>')
+                {
+                    div.innerHTML =`<ul>
+                                    <ul>
+                                        <ul>
+                                            <li style="color:red"><div id="sam_bullet_change">Male</div></li>
+                                            <li style="color:red"><div id="sam_bullet_change">Eau de Toilette</div></li>
+                                            <li style="color:red"><div id="sam_bullet_change">100 ml</div></li>
+                                            <li style="color:red"><div id="sam_bullet_change">Daytime/Citrus</div></li>
+                                            <li style="color:red"><div id="sam_bullet_change">Country of Origin: India</div></li>
+                                        </ul>
+                                    </ul>
+                                </ul>`
+                }
+                
                 document.getElementById("sam_keyfeatures").append(div)
             count=0;
+            // console.log("count after key value",count)
 
         }
         else 
@@ -169,17 +188,26 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         }})
     
     
-    // disclaimer details entry
+    //>>>>>>>>>>>>> details entry <<<<<<<<<<<<//line 191 to 219
 
     document.getElementById("sam_details").addEventListener("click",function(){
     document.getElementById("sam_keyfeatures").innerHTML="";
     count++;
+    let cat =document.getElementById("Sam_category_page").innerHTML;  // to import values ot the KEY values after knowing which thing is added to the page
+
     if(count==1)
     {
         document.getElementById("sam_keyfeatures").style.display ="block"
         let div =document.createElement("h3")
             div.setAttribute("id","sam_appending_data_div")
-            div.innerHTML= "Lustrous, gleaming and radiating; this Sunshine Shimmer Diamond Pendant is oneof prettiest piece of jewelry you will ever own. Experience the Sunshine Shimmer embrace and glow with pride. Diamond Pcs: 1 pc, Diamond Wt: 0.07 cts, Diamond Color: I/J, Diamond Clarity: VS, Gold Wt: 1.750 gms Gold Purity: 18kt Pendant Heigth: 1.70 cm (With Hook)& Width: 0.90 cm" ;
+            if( cat =='<i>/ jewellery</i>')
+            {
+                div.innerHTML= "Lustrous, gleaming and radiating; this Sunshine Shimmer Diamond Pendant is oneof prettiest piece of jewelry you will ever own. Experience the Sunshine Shimmer embrace and glow with pride. Diamond Pcs: 1 pc, Diamond Wt: 0.07 cts, Diamond Color: I/J, Diamond Clarity: VS, Gold Wt: 1.750 gms Gold Purity: 18kt Pendant Heigth: 1.70 cm (With Hook)& Width: 0.90 cm" ;   
+            }
+            if(cat =='<i>/ perfumes</i>')
+            {
+                div.innerHTML =`Exhilarate and mesmerise the senses in every way. Versace Pour Homme 100 ml for men consists of a fresh citrus tone, which will surely surprise one's senses. The Top notes are lemon, neroli, bergamot and rose de mai, middle notes are hyacinth, clary sage, cedar and geranium and the base notes are Tonka bean, musk and amber. The Eau de Toilette is ideal for Daytime use.`
+            }
             document.getElementById("sam_keyfeatures").append(div)
         count=0;
 
@@ -189,59 +217,96 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         document.getElementById("sam_keyfeatures").style.display ="none"
     }})
 
-    // disclaimer data entry
+    //>>>>>>>>>>>>>> disclaimer data entry <<<<<<<<<<<<<// lines 220 to 261
 
     document.getElementById("sam_dislcaimer").addEventListener("click",function(){
         document.getElementById("sam_keyfeatures").innerHTML="";
         count++;
+        let cat =document.getElementById("Sam_category_page").innerHTML;  // to import values ot the KEY values after knowing which thing is added to the page
+
+        
         if(count==1)
         {
             document.getElementById("sam_keyfeatures").style.display ="block"
             let div =document.createElement("h3")
                 div.setAttribute("id","sam_appending_data_div")
-                div.innerHTML= "Our jewellery pricing is calculated using current precious metal and gem prices. These prices do change from time to time, owing to the fluctuations in prices of precious metal and gem prices, so our prices change as well The current price was updated on 25th December 2019 For any price difference our customer service will contact you post the order. In case of non payment of the extra amount the order stands cancelled";
-                
+                if( cat =='<i>/ jewellery</i>')
+                {
+                    div.innerHTML= "Our jewellery pricing is calculated using current precious metal and gem prices. These prices do change from time to time, owing to the fluctuations in prices of precious metal and gem prices, so our prices change as well The current price was updated on 25th December 2019 For any price difference our customer service will contact you post the order. In case of non payment of the extra amount the order stands cancelled";
+                }   
+                if(cat =='<i>/ perfumes</i>')
+                {
+                    div.innerHTML="";
+                }
+
             let h3 =document.createElement("h3")
                 h3.setAttribute("id","sam_heading_in_disclaimer")
-                h3.innerHTML="Precious metal and gem pricing:"
+                if( cat =='<i>/ jewellery</i>')
+                {
+                    h3.innerHTML="Precious metal and gem pricing:"
+                }
+                if(cat =='<i>/ perfumes</i>')
+                {
+                    h3.innerHTML="";
+                }
 
                 
                 document.getElementById("sam_keyfeatures").append(h3,div)
             count=0;
+            
         }
         else 
         {
             document.getElementById("sam_keyfeatures").style.display ="none"
         }})
 
-        // brand details entry
+        //>>>>>>>> brand details entry line <<<<<<<<// 263 to 301
     
         document.getElementById("sam_brand_details").addEventListener("click",function(){
         document.getElementById("sam_keyfeatures").innerHTML="";
         count++;
+        let cat =document.getElementById("Sam_category_page").innerHTML;  // to import values ot the KEY values after knowing which thing is added to the page
+
         if(count==1)
         {
             document.getElementById("sam_keyfeatures").style.display ="block"
             let div =document.createElement("h3")
                 div.setAttribute("id","sam_appending_data_div1_manuf")
-                div.innerHTML= "SURAT DIAMOND JEWELRY PVT. LTD. Vasant Vilas,31 Dr. D.D. Sathye Marg Mumbai - 400004";
+                if( cat =='<i>/ jewellery</i>')
+                {
+                    div.innerHTML= "SURAT DIAMOND JEWELRY PVT. LTD. Vasant Vilas,31 Dr. D.D. Sathye Marg Mumbai - 400004";
+                }
+                if(cat =='<i>/ perfumes</i>')
+                {
+                    div.innerHTML="Shree Traders 101, AL SANA HOUSE,Maharashtra, 400049"
+                }
                 
             let h3 =document.createElement("h3")
                 h3.setAttribute("id","sam_heading_in_disclaimer")
-                h3.innerHTML="Manufacturer / Packer / Importer:"
+                if( cat =='<i>/ jewellery</i>')
+                {
+                    h3.innerHTML="Manufacturer / Packer / Importer:"
+                }
+                if(cat =='<i>/ perfumes</i>')
+                {
+                    h3.innerHTML="Manufacturer / Packer / Importer:"
+                }
                 document.getElementById("sam_keyfeatures").append(h3,div)
             count=0;
+
         }
         else 
         {
             document.getElementById("sam_keyfeatures").style.display ="none"
         }})
 
-        // review write details
+        //>>>>>>>>>> review write details <<<<<<<<<<// lines 303 to 328
 
         document.getElementById("sam_review_write").addEventListener("click",function(){
         document.getElementById("sam_keyfeatures").innerHTML="";
         count++;
+        let cat =document.getElementById("Sam_category_page").innerHTML;  // to import values ot the KEY values after knowing which thing is added to the page
+
         if(count==1)
         {
             document.getElementById("sam_keyfeatures").style.display ="block"
@@ -254,6 +319,7 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
                                 <div id="sam_only_signin_user">Only registered users can write reviews. Please, <span id="sam_span_signIn">Sign in</span> or <span id="sam_span2_accout_create">create an account</span></div>` ;
                 document.getElementById("sam_keyfeatures").append(div)
             count=0;
+
         }
         else 
         {
@@ -261,7 +327,7 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         }})
 }
 
-// functionality for adding count of products
+//>>>>>>>>>>>>>>>>> functionality for adding count of products <<<<<<<<<<<<<<// lines 330 to 383
 {
     let count =1;
     document.getElementById("sam_display_value_count").innerHTML=count;
@@ -269,20 +335,20 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         if(count>1 &&count<10)
         {
         count--;
-        document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
+        // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
         document.getElementById("sam_display_value_count").innerHTML=""
         document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=9 &&count<100)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
             count--;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=99)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
             count--;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
@@ -294,20 +360,20 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         if(count>=1 &&count<10)
         {
         count++;
-        document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
+        // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
         document.getElementById("sam_display_value_count").innerHTML=""
         document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=9 &&count<100)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
             count++;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=99)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
             count++;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
@@ -316,26 +382,22 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
     })
 }
 
-//data recieve from sumit when we click on the perfume and jewellary page
+//>>>>>>>>>>>>>> data recieve from sumit when we click on the perfume or jewellary page to buy <<<<<<<<<<<<<<<//lines 385 to 389
 
 let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
     console.log("data recieve on click",obj_data_get_from_sumit)
 
-
-
-
-
 // add to cart button functionality
-
+//>>>>>>>>>>>>>>>>>here is the most important work going that all data from pages made by sumit is fetch here and form the same data i am using in this page as well as transfering to  the bhavesh page <<<<<<<<<<<<<<<<<<<<<<<<<<//
+// lines 392 to 419
 {
 
 var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  transfer data 
     document.getElementById("sam_add_to_cart").addEventListener("click",()=>{
 
-    // console.log("HII i am adding product to the cart")
     let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
-    console.log("data recieve on click",obj_data_get_from_sumit)
-// localStorage.setItem("clickedJewelleryData", JSON.stringify(data))//by sumit kartik dgeting data
+    // console.log("data recieve on click",obj_data_get_from_sumit)
+    //>>>>>>> localStorage.setItem("clickedJewelleryData", JSON.stringify(data))// storage define in sumit page just for cross check record <<<<<<<<<<<<<<//
 
 
     let count =document.getElementById("sam_display_value_count").innerHTML
@@ -350,18 +412,15 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
 
     arr.push(obj_transfer_to_bhavesh)
 
-    localStorage.setItem("productlist",JSON.stringify(arr))
+    localStorage.setItem("productlist",JSON.stringify(arr_bhavesh))
+    //>>>>>>> var arr = JSON.parse(localStorage.getItem('productlist')) || []; // storage define in bhavesh page <<<<<<<<<<<//
     })
 }
 
 
-{
-
-    
-
-    function abc(){     
-
-        // obj_data_get_from_sumit is used in place of temp_check when sumit provide the link and data
+{  
+//>>>>>>>>>>>>>>>>> data getting from sumit page is using in the page with the help of code written in lines 423 to 447 <<<<<<<<<<<<<<<//
+    function displayInpage(){     
         if(obj_data_get_from_sumit.sub_category=='perfumes')
         {
             let ram = (Math.random()*(1.50-1.25)+1.25).toFixed(2);
@@ -380,16 +439,14 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
             document.getElementById("sam_save_amount").innerHTML=`${Math.floor((ram-1)*100)}%`
             let img =document.createElement("img")
                 img.src=obj_data_get_from_sumit.image;
-
             document.getElementById("Sam_image_display").append(img)
-                // Sam_image_display
         }
     }
-    abc()
+    displayInpage()
 }
 
 
-//Wrap gift functionality
+//>>>>>>>>>>>> Wrap gift functionality <<<<<<<<<<<<<<<<<// lines 450 to 457
 {
     document.getElementById("sam_wrap_gift").addEventListener("click",function (){
 
@@ -398,7 +455,7 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
     })
 }
 
-// Gift card functionality
+//>>>>>>>>>>>>> Gift card functionality<<<<<<<<<<<<<// lines 459 to 467
 
 {
     document.getElementById("sam_gift_card").addEventListener("click",function (){
