@@ -353,6 +353,7 @@ body {
   padding: 0px;
   height: 100%;
 }
+
 .right_header .account div {
   display: flex;
   margin-right: 15px;
@@ -364,7 +365,10 @@ body {
 .fas {
   font-size: 20px;
 }
-.cart:hover {
+.cart a {
+  color: black;
+}
+.cart a:hover {
   color: red;
   cursor: pointer;
 }
@@ -645,7 +649,7 @@ body {
 .gift_now_btn {
   background-color: burlywood;
   color: white;
-  width: 75px;
+  /* width: 75px; */
   display: flex;
   align-items: center;
   padding: 4px 10px;
