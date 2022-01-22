@@ -137,6 +137,7 @@ body {
   position: absolute;
   top: 7%;
   font-family: "Lato", arial, tahoma;
+  z-index: 10;
 }
 
 #create_header {
@@ -264,6 +265,7 @@ body {
   position: fixed;
   top: 0px;
   display: none;
+  z-index: 1;
 }
 
 #sign_header {
@@ -643,6 +645,7 @@ form label {
   overflow-y: scroll;
   overflow-x: hidden;
   transition: 0.5s linear;
+  z-index: 5;
 }
 .active {
   width: 270px;

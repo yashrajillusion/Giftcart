@@ -49,7 +49,7 @@ function footer(){
        </div>
        <div class="footer-col">
         <h4>NEWSLETTER</h4>
-        <input type="email" id="email" placeholder="Your email address">
+        <input type="email" id="email_footer" placeholder="Your email address">
         <button id="sub">SUBSCRIBE</button>
         
    </div>
