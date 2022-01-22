@@ -21,6 +21,11 @@ document.getElementById("Sam_category_page").addEventListener("click",function (
     {
         window.location.href="/jewellery.html"
     }
+    if(cat =='<i>/ perfumes</i>')
+    {
+        window.location.href="/perfume.html"
+
+    }
 })
 
 //eventlistenre for product name 
