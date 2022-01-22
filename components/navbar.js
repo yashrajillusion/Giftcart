@@ -52,8 +52,10 @@ async function navbar_part(){
             </span>
           </div>
           <div class="cart">
+          <a href="./cart.html">
             <span><i class="fas fa-shopping-cart"></i></span>
             <span class="cart-count">50</span>
+            </a>
           </div>
           <div class="nav_btn">
             <span><i class="fas fa-bars"></i></span>

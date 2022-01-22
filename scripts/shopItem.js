@@ -56,14 +56,12 @@ document.getElementById("Sam_name_product").addEventListener("click",function ()
         {
             console.log("i am visible")
             document.getElementById("sam_delievry_pincode_check").style.display ="block";
-            document.getElementById("sam_elaborate_margin").style.marginTop="220px"
         }
         if(count ==2)
         {
             console.log("i am Invisible")
             document.getElementById("sam_delievry_pincode_check").style.display ="none";
             document.getElementById("sam_alert_append_div").style.display="none"
-            document.getElementById("sam_elaborate_margin").style.marginTop="90px"
             count =0;
         }
 
@@ -337,20 +335,20 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         if(count>1 &&count<10)
         {
         count--;
-        document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
+        // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
         document.getElementById("sam_display_value_count").innerHTML=""
         document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=9 &&count<100)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
             count--;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=99)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
             count--;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
@@ -362,20 +360,20 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
         if(count>=1 &&count<10)
         {
         count++;
-        document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
+        // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="25px"
         document.getElementById("sam_display_value_count").innerHTML=""
         document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=9 &&count<100)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="30px"
             count++;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
         }
         else if(count>=99)
         {
-            document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
+            // document.querySelector("#sam_item_count>#sam_display_value_count").style.width="35px"
             count++;
             document.getElementById("sam_display_value_count").innerHTML=""
             document.getElementById("sam_display_value_count").innerHTML=count;
@@ -393,8 +391,8 @@ let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryDa
 //>>>>>>>>>>>>>>>>>here is the most important work going that all data from pages made by sumit is fetch here and form the same data i am using in this page as well as transfering to  the bhavesh page <<<<<<<<<<<<<<<<<<<<<<<<<<//
 // lines 392 to 419
 {
-let arr_bhavesh=[]
 
+var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  transfer data 
     document.getElementById("sam_add_to_cart").addEventListener("click",()=>{
 
     let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
@@ -411,9 +409,8 @@ let arr_bhavesh=[]
         product_count:Number(count)
     }
 
-    console.log("bhavesh",obj_transfer_to_bhavesh)
 
-    arr_bhavesh.push(obj_transfer_to_bhavesh)
+    arr.push(obj_transfer_to_bhavesh)
 
     localStorage.setItem("productlist",JSON.stringify(arr_bhavesh))
     //>>>>>>> var arr = JSON.parse(localStorage.getItem('productlist')) || []; // storage define in bhavesh page <<<<<<<<<<<//

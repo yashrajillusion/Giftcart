@@ -52,6 +52,7 @@ hr{
 #Sam_Display_nd_details
 {
     display: flex;
+    height: auto;
 }
 #Sam_image_display
 {
@@ -82,7 +83,7 @@ hr{
 {
     width: 50%;
     background-color: transparent;
-    height: 600px;
+    height: auto;
 }
 #Sam_details_display>h1
 {
@@ -177,6 +178,10 @@ hr{
 .sam_checked /* to acheive star rating*/
 {  
     color: red;
+}
+#sam_rating_star>.Bs_star_image_div>:nth-child(5)
+{
+    font-size: 20px;
 }
 
 #sam_rating_add>img
