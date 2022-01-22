@@ -412,7 +412,7 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
 
     arr.push(obj_transfer_to_bhavesh)
 
-    localStorage.setItem("productlist",JSON.stringify(arr_bhavesh))
+    localStorage.setItem("productlist",JSON.stringify(arr))
     //>>>>>>> var arr = JSON.parse(localStorage.getItem('productlist')) || []; // storage define in bhavesh page <<<<<<<<<<<//
     })
 }

@@ -1,9 +1,11 @@
 let glob;
-let wishlist_arr = JSON.parse(localStorage.getItem('wishListData')) || [];
 function displayTable (items,location) {
     var array = [];
     var total;
     location.innerHTML = null;
+    if(items.length===0){
+        return;
+    }
     items.forEach((elem,index)=>{
         let row = document.createElement('tr');
         let td1 = document.createElement('td');
@@ -11,12 +13,15 @@ function displayTable (items,location) {
         td1_div.setAttribute('class','Bs_remove_div');
         
         let td1_div_button1=  document.createElement('button');
-        td1_div_button1.addEventListener('click', function(){
-            wishlist_arr.push(items[index])
+        td1_div_button1.addEventListener('click', ()=>{
+            let wishlist_arr = JSON.parse(localStorage.getItem('wishListData')) || [];
+            let dd = items[index];
+            wishlist_arr.push(dd);
+
             localStorage.setItem('wishListData',JSON.stringify(wishlist_arr));
             items.splice(index,1)
             localStorage.setItem('productlist',JSON.stringify(items));
-            // displayTable(items,location);
+            displayTable(items,location);
             window.location.href = './wishlist_layout.html';
 
         })
