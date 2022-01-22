@@ -8,7 +8,7 @@ function RazonPayment() {
 function discountApply() {
     let dd = document.getElementById('Bs_discount_code').value;
 
-    if(dd !== "Masai99"){
+    if(dd !== "masai99"){
         return;
     }
     let cart_Total = document.getElementById('Bs_cart_total');
@@ -20,20 +20,23 @@ function discountApply() {
     order_total.textContent = `${10}`;
     let py_total = document.getElementById('total_amount');
     py_total.innerText = `₹${10}`;
+    let final_total = 10;
+    localStorage.setItem("total_price",JSON.parse(final_total));
+
 }
 
-let btn1 = document.getElementById('Bs_payment_btn1');
-btn1.addEventListener('click',()=> {
-    console.log('ere')
-    // yash add your payment getway here
-})
+// let btn1 = document.getElementById('Bs_payment_btn1');
+// btn1.addEventListener('click',()=> {
+//     console.log('ere')
+//     // yash add your payment getway here
+// })
 
-let btn2 = document.getElementById('Bs_payment_btn2');
-btn2.addEventListener('click',()=> {
-    console.log('ere2')
-    //  add payment getway here too
+// let btn2 = document.getElementById('Bs_payment_btn2');
+// btn2.addEventListener('click',()=> {
+//     console.log('ere2')
+//     //  add payment getway here too
 
-})
+// })
 
 function HardCode(event) {
     event.preventDefault()
@@ -212,6 +215,8 @@ function displayTable(items,location){
     order_total.textContent = `${total+160}`;
     let py_total = document.getElementById('total_amount');
     py_total.innerText = `₹${total}`;
+    let final_total = (total+160)
+    localStorage.setItem("total_price",JSON.parse(final_total));
 }
 
 let shownoshow = document.querySelector('#Bs_cart_items_div');
