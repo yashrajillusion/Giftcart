@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Jewellery</title>
     <link rel="stylesheet" href="./styles/jewellery.css" />
     <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" href="styles/landing_page.css" />
@@ -15,6 +15,11 @@
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://style.giftcart.com/pub/media/favicon/stores/1/16x16.png"
     />
   </head>
   <body>
@@ -153,6 +158,10 @@
 
   appendJewellery(filter_data, jewellery_div);
 
+  let clickdiv = document.querySelector('.material-icons-outlined');
+    clickdiv.addEventListener('click',()=>{
+        window.location.href = './random.html'
+    })
   ///////////////////////script for jewelry data ends here///////////////////////////
 </script>
 
