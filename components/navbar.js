@@ -513,7 +513,7 @@ async function navbar_part(){
           <div id="new_join_gift">New? Join GiftCart</div>
           <div id="signup_area">
             <button id="signup_btn">
-              <a href="#" id="switch_boxes">SIGN UP</a>
+              <a href="#" style="text-decoration: none; color:black" id="switch_boxes">SIGN UP</a>
             </button>
           </div>
         </form>

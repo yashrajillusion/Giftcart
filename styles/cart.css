@@ -16,7 +16,9 @@
 #Bs-link-to-home>a:hover {
     color: red;
 }
+
 #Bs_main_div {
+    text-decoration: none;
     display: flex;
     width: 88%;
     margin: auto;
