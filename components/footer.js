@@ -25,9 +25,23 @@ function footer(){
 <footer class="footer2">
 
 <div class="containerF">
+   <div id="row">
+      <div id="footer-col" class="footer-col">
+              <h4>INFORMATION</h4>
+      </div>
+          <div class="sam_emptydiv_hr_line"></div>
+      <div id="footer-col" class="footer-col">
+           <h4>HELPFUL LINKS</h4>
+      </div>
+          <div class="sam_emptydiv_hr_line"></div>
+      <div id="footer-col" class="footer-col">
+           <h4>NEWSLETTER</h4>
+      </div>
+          <div class="sam_emptydiv_hr_line"></div>
+   </div>
    <div class="row">
        <div class="footer-col">
-           <h4>INFORMATION</h4>
+           <h4></h4>
            <ul>
                <li><a href="#">>Blog</a></li>
                <li><a href="#">>About Us</a></li>
@@ -37,9 +51,8 @@ function footer(){
                <li><a href="#">>FAQ</a></li>
            </ul>
        </div>
-   
        <div class="footer-col">
-           <h4>HELPFUL LINKS</h4>
+           <h4></h4>
            <ul>
                <li><a href="#">>Contact Us</a></li>
                <li><a href="#">>Suggest a Gift</a></li>
@@ -49,7 +62,7 @@ function footer(){
            </ul>
        </div>
        <div class="footer-col">
-        <h4>NEWSLETTER</h4>
+        <h4></h4>
         <input type="email" id="email_footer" placeholder="Your email address">
         <button id="sub">SUBSCRIBE</button>
         
@@ -78,6 +91,10 @@ function footer(){
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBU3ScCzsLZtuCB19Wny02nX4VvjLdlW9AcPj6XQgmjHFAvtG441MDRhRYslI-571qXnY&usqp=CAU" id="imgF" >  
       </div>
     </div>
+<div id="sam_page_end_hr">
+© 2012-2018 Giftcart.com. All Rights Reserved
+<div id="sam_happy_emoji">Hi! &#128515;!</div>
+</div>
 </footer>
 `
 }
