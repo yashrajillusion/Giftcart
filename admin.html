@@ -282,7 +282,7 @@
         name="search"
       />
       <button class="search_btn" type="submit">
-        <span class="material-icons-outlined"> search </span>
+        <span id="search_logo" class="material-icons-outlined"> search </span>
       </button>
     </div>
   </body>
@@ -349,6 +349,13 @@
   }
   //search product
   let search = document.querySelector("#search_tab");
+  let search_logo = document.querySelector("#search_logo");
+  search_logo.addEventListener("click", () => {
+    let id = search.value;
+    let url = `https://giftcartbackendapp.herokuapp.com/api/products/${id}`;
+    getDataFromDataBase(url);
+  });
+
   search.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       let id = search.value;
