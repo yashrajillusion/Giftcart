@@ -255,7 +255,11 @@ async function navbar_responsive(){
     };
   
     search_item.oninput = () => debounce(getDataFromDataBase, 500);
-  
+    
+    document.querySelector('#search_btn').addEventListener('click',()=>{
+      product = search_item.value;
+        getDataFromDataBase(get_url, product);
+    })
     var id;
     function debounce(func, delay) {
       if (id) {
@@ -266,6 +270,7 @@ async function navbar_responsive(){
         func(get_url, product);
       }, delay);
     }
+
     async function getDataFromDataBase(url, product) {
       try {
         if (product.length <= 1) {
@@ -289,9 +294,14 @@ async function navbar_responsive(){
         console.log(err, "Not Found");
       }
     }
+    let location;
     function search_itemlogic(data, prod) {
-      let location = document.querySelector("#search_result_div");
-  
+      location = document.querySelector("#search_result_div");
+      document.addEventListener('mouseup', function(e) {
+        if (!location.contains(e.target)) {
+            location.style.display = 'none';
+        }
+    });
       location.style.display = "block";
       location.innerHTML = null;
       let arr = [];
@@ -313,7 +323,7 @@ async function navbar_responsive(){
         }
       });
       arr = arr.reverse();
-      arr.map(({ image, price, product }) => {
+      arr.map(({ image, price, product,sub_category,category }) => {
         let div = document.createElement("div");
         let img = document.createElement("img");
         img.src = image;
@@ -324,13 +334,26 @@ async function navbar_responsive(){
         let div1 = document.createElement("div");
         div1.append(p1, p2);
         div.append(img, div1);
+        div.onclick = ()=>{
+          let obj = {
+            image,
+            price,
+            product,
+            sub_category,
+            category
+          }
+          localStorage.setItem('clickedJewelleryData',JSON.stringify(obj))
+          window.location.href = "shopitem.html"
+        }
         location.append(div);
+
       });
       if (arr.length == 0) {
         location.style.display = "none";
         return;
       }
     }
+    
 }
 
 export default navbar_responsive;

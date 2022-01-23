@@ -385,7 +385,7 @@ document.getElementById("Sam_check_button").addEventListener("click",function ()
 //>>>>>>>>>>>>>> data recieve from sumit when we click on the perfume or jewellary page to buy <<<<<<<<<<<<<<<//lines 385 to 389
 
 let obj_data_get_from_sumit= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
-    console.log("data recieve on click",obj_data_get_from_sumit)
+    
 
 // add to cart button functionality
 //>>>>>>>>>>>>>>>>>here is the most important work going that all data from pages made by sumit is fetch here and form the same data i am using in this page as well as transfering to  the bhavesh page <<<<<<<<<<<<<<<<<<<<<<<<<<//
@@ -421,8 +421,8 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
 {  
 //>>>>>>>>>>>>>>>>> data getting from sumit page is using in the page with the help of code written in lines 423 to 447 <<<<<<<<<<<<<<<//
     function displayInpage(){     
-        if(obj_data_get_from_sumit.sub_category=='perfumes')
-        {
+        // if(obj_data_get_from_sumit.sub_category=='perfumes')
+        // {
             let ram = (Math.random()*(1.50-1.25)+1.25).toFixed(2);
 
             document.querySelector("title").innerHTML="";
@@ -440,7 +440,7 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
             let img =document.createElement("img")
                 img.src=obj_data_get_from_sumit.image;
             document.getElementById("Sam_image_display").append(img)
-        }
+        // }
     }
     displayInpage()
 }
