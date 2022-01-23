@@ -255,8 +255,10 @@ async function navbar_responsive(){
     };
   
     search_item.oninput = () => debounce(getDataFromDataBase, 500);
+    
     document.querySelector('#search_btn').addEventListener('click',()=>{
-      
+      product = search_item.value;
+        getDataFromDataBase(get_url, product);
     })
     var id;
     function debounce(func, delay) {
