@@ -126,7 +126,8 @@
     color:red;
 }
 #line{
-    flex: 5;
+    width: 60%;
+    /* flex: 5; */
     height:0;
     border:solid 1px grey;
     background: grey;

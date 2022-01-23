@@ -22,7 +22,6 @@ function displayTable (items,location) {
             items.splice(index,1)
             localStorage.setItem('productlist',JSON.stringify(items));
             displayTable(items,location);
-            window.location.href = './wishlist_layout.html';
 
         })
         td1_div_button1.innerHTML = `<span>MOVE TO WHISHLIST</span> <img  src="https://www.publicdomainpictures.net/pictures/50000/velka/pencil-silhouette.jpg" height="15" alt="">`;
@@ -64,7 +63,7 @@ function displayTable (items,location) {
         td4_div.setAttribute('class','Bs_qty_div');
         let td4_div_input = document.createElement('input');
         td4_div_input.setAttribute('class','product_count');
-        td4_div_input.value = `${elem.product_count}`;
+        td4_div_input.value = `${1}`;
         let td4_div_button = document.createElement('button');
         td4_div_button.setAttribute('id','Bs_update_btn')
         td4_div_button.addEventListener('click',()=>{

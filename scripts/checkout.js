@@ -58,11 +58,11 @@ function FormData(event) {
     let phone_number = document.getElementById('Bs_number').value;
     let checkbox = document.getElementById('Bs_checkbox_d');
     if(!checkbox.checked){
-        alert('click checkbox')
+        alert('Enable Standand Delivery')
         return;
     }
     if(first_name == ''|| last_name == ''|| address == ''|| state_name == ''|| post_code == ''|| country_name == ''|| phone_number <10){
-        alert('enter all credantials');
+        alert('Enter All Credantials');
         return;
     }
     else{

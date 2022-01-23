@@ -195,3 +195,6 @@
 .Bs_cart_p3::after {
     content: '.00';
 }
+.BS_label_checkbox {
+    color: red;
+}

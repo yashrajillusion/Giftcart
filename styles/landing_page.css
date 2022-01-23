@@ -1,7 +1,9 @@
 body {
   margin: 0px;
 }
-
+.cat_opt>div>ul>a>li:hover {
+  color: red;
+}
 #karthik_mininav_bar {
   width: 100%;
   height: 49px;
@@ -453,12 +455,12 @@ form label {
   background-color: #f10102;
   color: white;
   border-radius: 50%;
-  padding: 3px;
+  padding: 3px 7px;
   text-align: center;
   line-height: 15px;
   font-size: 13px;
   position: absolute;
-  top: 8px;
+  top: 4px;
   right: 60px;
 }
 .hello_signin {
