@@ -220,7 +220,7 @@
   },
   ]
   var arr = JSON.parse(localStorage.getItem("wishListData")) || []
-  console.log(arr)
+  
   let jewellery_div = document.getElementById("jewellery_container")
   
 

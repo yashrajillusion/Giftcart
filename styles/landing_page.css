@@ -1,7 +1,7 @@
 body {
   margin: 0px;
 }
-.cat_opt>div>ul>a>li:hover {
+.cat_opt > div > ul > a > li:hover {
   color: red;
 }
 #karthik_mininav_bar {
@@ -523,6 +523,7 @@ form label {
   background-color: white;
   position: absolute;
   left: 10%;
+  transform: translateX(0%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   display: flex;
@@ -600,7 +601,8 @@ form label {
 }
 .cat_birth {
   width: 500px;
-  z-index: 2;
+  z-index: 5;
+  transform: translateX(15%);
 }
 .valentine {
   visibility: hidden;
@@ -608,6 +610,8 @@ form label {
   height: auto;
   padding: 10px;
   right: 46%;
+  right: 50%;
+  transform: translateX(20%);
 }
 .valentine li {
   color: black;
@@ -616,8 +620,8 @@ form label {
   visibility: hidden;
   width: 120px;
   padding: 10px;
-  right: 24%;
-  z-index: 2;
+  right: 25.5%;
+  z-index: 5;
 }
 .sticky {
   position: fixed;
