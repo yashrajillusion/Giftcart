@@ -718,6 +718,7 @@ form label {
   padding: 6px;
 }
 .search_mic input {
+  padding-left: 10px;
   width: 80%;
   border-radius: 0px;
   border: 1px solid rgb(95, 94, 94);

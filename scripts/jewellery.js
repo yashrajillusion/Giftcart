@@ -11,7 +11,7 @@ async function getJewellery(url){
 
 
  function appendJewellery(data,location){
-     console.log(data)
+
      ///////////////////for loop start/////////////////////////
      data.forEach(element => {
          let div = document.createElement("div")
@@ -43,9 +43,9 @@ async function getJewellery(url){
          MRP.innerText =  (element.price);
          mrp_div.setAttribute("class","mrp_div")
          let discount = element.discount
-         let originalprice = (((element.price)/discount)+element.price)
+         
          let originalPrice = document.createElement("p")
-         originalPrice.innerText= "₹"+originalprice.toFixed(2)
+         originalPrice.innerText= "₹"+element.price
 
          ///////////////////star icon//////////////////////////////////
          let star_Div = document.createElement("div")
