@@ -1,5 +1,5 @@
 
-  let data =[
+  var data =[
     {
       image:'https://style.giftcart.com/pub/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/c/a/cab100m23.jpg',
       product:'Calvin Klein Be 100 ml For Men',
@@ -223,8 +223,27 @@
   console.log(arr)
   let jewellery_div = document.getElementById("jewellery_container")
   
+
+  let div = document.querySelector('.options');
+    div.addEventListener('click',()=>{
+        if(div.value === 'low'){
+         data = data.sort(function(a,b){
+           return a.price-b.price
+         })
+         appendJewellery(data);
+        }
+        else if(div.value === 'high'){
+          data = data.sort(function(a,b){
+            return b.price-a.price
+          })
+           appendJewellery(data);
+        }
+    })
+
+
   function appendJewellery(data){
-       //console.log(data)
+  jewellery_div.innerHTML = null;
+
        ///////////////////for loop start/////////////////////////
        data.forEach((element,index) => {
            let div = document.createElement("div")

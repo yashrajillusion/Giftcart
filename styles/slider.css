@@ -8,7 +8,7 @@
 } */
 #Bs_slide_images {
  position: relative;
- height:350px;
+ height:400px;
  margin-top: 0%;
  width: 99%;
   margin: auto;
@@ -24,7 +24,7 @@
  /* width:1160px;
   */
   width: 100%;
- height:350px;
+ height:400px;
  background-image:url("https://style.giftcart.com/pub/media/allbanners/New_Year_2022.png");
  background-position:center;
  background-size:cover;
@@ -32,7 +32,6 @@
  display:flex;
  align-items: center;
  justify-content:space-between;
- margin-left: 4px;
 }
 .container>button{
  /* margin:1rem; */

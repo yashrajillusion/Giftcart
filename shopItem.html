@@ -22,6 +22,9 @@
             crossorigin="anonymous">
     </script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Footer css  -->
+    <link rel="stylesheet" href="./styles/footer.css">
+
 
 </head>
 <body>
@@ -116,21 +119,35 @@
                 <div class="sam_hover_div" id="sam_review_write" >REVIEWS</div>
             </div>
         </div>
+        <div style="margin-top: 60px; border-bottom: 1px solid silver;"></div>
+        <div style="margin-top: 130px; margin-bottom: 60px; border-bottom: 0.5px solid silver;"></div>
     </div>
+
+    <!-- footer added here -->
+    <div id="sam_footer">
+
+    </div>
+    
 </body>
 </html>
 <script src="./scripts/shopItem.js"></script>
 <script type="module">
-    // navbar html are imported here
-  import navbar_part from "./components/navbar.js";
-  let navbar_com = await navbar_part();
-  document.querySelector(".nav_bar_container").innerHTML = navbar_com;
-  // navbar logic are imported here
-  import navbar_responsive from "./scripts/header.js";
-  await navbar_responsive();
-  let getcart = JSON.parse(localStorage.getItem('productlist'));
+// navbar html are imported here
+import navbar_part from "./components/navbar.js";
+    let navbar_com = await navbar_part();
+        document.querySelector(".nav_bar_container").innerHTML = navbar_com;
+// navbar logic are imported here
+import navbar_responsive from "./scripts/header.js";
+    await navbar_responsive();
+        let getcart = JSON.parse(localStorage.getItem('productlist'));
+// console.log(getcart.length)
+            let cart_count = document.getElementById('cart_cc');
+                cart_count.textContent = `${getcart.length}`;
+    
+</script>
 
-    console.log(getcart.length)
-    let cart_count = document.getElementById('cart_cc');
-    cart_count.textContent = `${getcart.length}`;
+<!-- below script is use for footer import to page -->
+<script type="module">
+    import footer from "./components/footer.js"
+        document.getElementById("sam_footer").innerHTML=footer();
 </script>
