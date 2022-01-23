@@ -108,6 +108,15 @@
       }
       .addprod {
         width: 300px;
+        box-sizing: border-box;
+        overflow: scroll;
+        height: 93vh;
+        overflow-x: hidden;
+      }
+      .addprod::-webkit-scrollbar {
+        background: rgb(21, 247, 175);
+        border-radius: 8px;
+        width: 5px;
       }
       .display_prod {
         width: 100%;
@@ -238,6 +247,9 @@
             <button id="form-btn" onclick="addProduct(event)">
               Add Product
             </button>
+            <button id="form-btn" onclick="updateProduct(event)">
+              Update Product
+            </button>
           </form>
         </div>
         <div class="display_prod">
@@ -346,27 +358,44 @@
   });
   // update functionality Put
   // updateProduct();
-  async function updateProduct(id) {
-    // e.preventDefault();
-    try {
-      let data = {
-        id: document.getElementById("id").value,
-        product: document.getElementById("title").value,
-        price: document.getElementById("price").value,
-        discount: document.getElementById("discount").value,
-        category: document.getElementById("category").value,
-        sub_category: document.getElementById("sub-cat").value,
-        image: document.getElementById("img").value,
-        stock_qty: document.getElementById("qty").value,
-        description: document.getElementById("des").value,
-      };
+  async function updateProduct(e) {
+    e.preventDefault();
+    let flag = false;
+    let id = document.getElementById("id").value;
+    let data = {
+      id: document.getElementById("id").value,
+      product: document.getElementById("title").value,
+      price: document.getElementById("price").value,
+      discount: document.getElementById("discount").value,
+      category: document.getElementById("category").value,
+      sub_category: document.getElementById("sub-cat").value,
+      image: document.getElementById("img").value,
+      stock_qty: document.getElementById("qty").value,
+      description: document.getElementById("des").value,
+    };
+    let y = Object.keys(data);
+    let send = {};
 
-      data = JSON.stringify(data);
+    for (let k = 0; k < y.length; k++) {
+      if (data[y[k]] === "") {
+        flag = true;
+      } else {
+        send[y[k]] = data[y[k]];
+      }
+    }
+
+    try {
+      data = JSON.stringify(send);
+      let option = "PUT";
+      if (flag) {
+        option = "PATCH";
+      }
+      console.log(option);
 
       let response = await fetch(
         `https://giftcartbackendapp.herokuapp.com/api/products/${id}`,
         {
-          method: "PUT",
+          method: option,
           body: data,
 
           headers: {
@@ -401,8 +430,6 @@
     }
   }
   function appendDatafromDataBase(data) {
-    console.log(data);
-
     let tbody = document.querySelector("tbody");
     tbody.innerHTML = null;
     if (Object.keys(data[0]).length == 0) {
