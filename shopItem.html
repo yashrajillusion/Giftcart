@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Page</title>
     <!-- yash link share for the css of header -->
     <link rel="icon" type="image/x-icon" href="https://style.giftcart.com/pub/media/favicon/stores/1/16x16.png"/>
     <!-- <link rel="stylesheet" type="text/css" media="all"
@@ -143,7 +143,10 @@ import navbar_responsive from "./scripts/header.js";
 // console.log(getcart.length)
             let cart_count = document.getElementById('cart_cc');
                 cart_count.textContent = `${getcart.length}`;
-    
+                let clickdiv = document.querySelector('.material-icons-outlined');
+    clickdiv.addEventListener('click',()=>{
+        window.location.href = './random.html'
+    })
 </script>
 
 <!-- below script is use for footer import to page -->

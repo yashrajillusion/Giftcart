@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes</title>
-    <link rel="stylesheet" href="./styles/perfumes.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Search Product</title>
+    <link rel="stylesheet" href="./styles/random.css">
     <link rel="stylesheet" href="styles/landing_page.css" />
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://style.giftcart.com/pub/media/favicon/stores/1/16x16.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -16,21 +21,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
     />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://style.giftcart.com/pub/media/favicon/stores/1/16x16.png"
-    />
 </head>
 <body>
     <div class="nav_bar_container"></div>
-    <div id="jewellery_header">
-        <div id="nav_name">
-            <h1>PERFUMES</h1>
-            <a href="/index.html">Home</a>
-            <a> / Perfumes</a> 
-        </div>
-    </div>
+    
     <div class="nav_header">
         
         <div class="filters">
@@ -86,24 +80,47 @@
 <script>
     
 </script>
-<script src="./scripts/perfumes.js"></script>
+
+<!-- /////////////////////script for jewelry data starts here  -->
 <script type="module">
-     // navbar html are imported here
+  // navbar html are imported here
   import navbar_part from "./components/navbar.js";
   let navbar_com = await navbar_part();
   document.querySelector(".nav_bar_container").innerHTML = navbar_com;
   // navbar logic are imported here
   import navbar_responsive from "./scripts/header.js";
   await navbar_responsive();
-  let getcart = JSON.parse(localStorage.getItem('productlist'));
+  let getcart = JSON.parse(localStorage.getItem("productlist"));
 
-    // console.log(getcart.length)
-    let cart_count = document.getElementById('cart_cc');
-    cart_count.textContent = `${getcart.length}`;
+  let cart_count = document.getElementById("cart_cc");
+  cart_count.textContent = `${getcart.length}`;
 
-    let clickdiv = document.querySelector('.material-icons-outlined');
+  let jewellery_div = document.getElementById("jewellery_container");
+  import { getJewellery, appendJewellery } from "./scripts/jewellery.js";
+  const url = "https://giftcartbackendapp.herokuapp.com/api/products";
+
+  let clickdiv = document.querySelector('.material-icons-outlined');
     clickdiv.addEventListener('click',()=>{
         window.location.href = './random.html'
     })
-</script>
+  ///////////////////////script for jewelry data ends here///////////////////////////
+  document.addEventListener("click", (e) => {
+    const isDropdownButton = e.target.matches("[data-dropdown-button]");
+    if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
+      return;
 
+    let currentDropdown;
+    if (isDropdownButton) {
+      currentDropdown = e.target.closest("[data-dropdown]");
+      currentDropdown.classList.toggle("active");
+    }
+
+    document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
+      if (dropdown === currentDropdown) return;
+      dropdown.classList.remove("active");
+    });
+  });
+</script>
+<script src="./scripts/random.js">
+
+</script>

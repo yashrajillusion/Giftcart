@@ -64,7 +64,13 @@ body {
     width: 100%;
     margin-right: 2.5%;
   }
-
+  #item_details>a {
+    color: black;
+    text-decoration: none;
+  }
+  #item_details>a:hover {
+    color: red;
+  }
   #item_pic {
     height: 95%;
     width: 30%;

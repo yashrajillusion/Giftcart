@@ -29,8 +29,8 @@ async function getJewellery(url){
          ///////////////////////title////////////////////////////////////
          let main_titleDiv = document.createElement("div")
          let title_div = document.createElement("div")
-         let title = document.createElement("p")
-         title.innerText = element.title
+         title_div.innerText = element.product;
+        //  let title = document.createElement("p")
          main_titleDiv.setAttribute("class","main_titleDiv")
 
          //////////////////////mrp//////////////////////////////////
@@ -38,14 +38,8 @@ async function getJewellery(url){
          let mrp_tag = document.createElement("p")
          mrp_tag.innerHTML = "MRP (incl gst)"
          let ruppee_icon = document.createElement("p")
-         ruppee_icon.innerHTML = "₹"
-         let MRP = document.createElement("p")
-         MRP.innerText =  (element.price);
+         ruppee_icon.innerHTML = `₹${element.price}`
          mrp_div.setAttribute("class","mrp_div")
-         let discount = element.discount
-         
-         let originalPrice = document.createElement("p")
-         originalPrice.innerText= "₹"+element.price
 
          ///////////////////star icon//////////////////////////////////
          let star_Div = document.createElement("div")
@@ -62,11 +56,11 @@ async function getJewellery(url){
 
           /////////////////appending//////////////////////////////////
           star_Div.append(star_icon1, star_icon2, star_icon3, star_icon4, star_icon5)
-         mrp_div.append(mrp_tag,ruppee_icon,MRP)
-         title_div.append(title)
+         mrp_div.append(mrp_tag,ruppee_icon)
+        //  title_div.append(title)
          heart_div.append(heart_tag)
          main_titleDiv.append(title_div,heart_div)
-         div.append(jewellery_img,main_titleDiv, mrp_div, star_Div,originalPrice)
+         div.append(jewellery_img,main_titleDiv, mrp_div, star_Div)
          location.append(div)
 
          //////////////////////styles/////////////////////////

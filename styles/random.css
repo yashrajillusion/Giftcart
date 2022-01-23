@@ -10,7 +10,7 @@ body {
   border: 1px solid white;
   top: 20px;
   height: 180px;
-  background-image: url("https://style.giftcart.com/pub/media/catalog/category/Jewellery.jpg");
+  background-image: url("https://style.giftcart.com/pub/media/catalog/category/perfume.jpg");
   background-repeat: no-repeat;
   background-size: 100% 180px;
 }
@@ -42,93 +42,75 @@ body {
   height: 60px;
   display: flex;
   width: 95%;
-  align-items: baseline;
+  align-items: center;
   padding: 0.5rem;
   gap: 1rem;
   border: 0.5px solid #e7e7e7;
   margin: auto;
   margin-top: 10px;
+  justify-content: space-around;
 }
-.filter {
-  background: none;
-  border: none;
-  text-decoration: none;
+.filters p {
   color: #878787;
+}
+.filters p:hover {
+  color: #222;
   cursor: pointer;
-  padding: 0;
 }
-.link {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color: #878787;
-  cursor: pointer;
-  padding: 0;
-}
-.dropdown.active > .link,
-.link:hover {
-  color: black;
-}
-
-.dropdown {
-  position: relative;
-  z-index: 3;
-}
-.dropdown-menu {
-  position: absolute;
-
-  width: 600px;
-  height: 230px;
-  left: 0;
-  top: 20px;
-  background-color: white;
-  padding: 0.75rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-.dropdown.active > .link + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-.information-grid {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-
-  gap: 2rem;
-}
-.dropdown-links {
+.filters {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-left: 20px;
-}
-.linkactive {
-  text-decoration: underline;
-  font-weight: normal;
-  color: black;
-}
+  width: 100%;
 
-.dropdown-links a {
-  margin-top: 5px;
-  padding: 5px;
+  align-items: center;
+}
+.filters a {
+  text-decoration: none;
+  margin-left: 2%;
+}
+.anchor:hover {
+  cursor: pointer;
+  background: #cccccc;
   color: #222222;
-  font-size: medium;
+}
+.anchor {
+  color: #878787;
 }
 
-.dropdown-links a:hover {
+.dropdowncontent {
+  position: absolute;
+  margin-top: 20px;
+  width: 300px;
+  background: white;
+  height: 70px;
+  display: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  z-index: 2;
+  margin-left: -5.5%;
+}
+.dropdowncontent a {
+  margin-top: 15px;
+  padding: 4%;
+
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.dropdowncontent a:hover {
   color: white;
 }
+
+.show {
+  display: flex;
+}
+
 .sorting {
   display: flex;
   position: relative;
-  margin-left: 65%;
+  justify-content: right;
   color: #878787;
-
-  width: 40%;
+  width: 100%;
 }
 .sorting h4 {
   margin-top: 6%;
@@ -136,82 +118,84 @@ body {
 .options {
   height: 35px;
   margin-top: 10px;
-  margin-left: 3%;
-
-  width: 40%;
+  margin-left: 1%;
+  width: 10%;
 }
 .arrow {
-  width: 15%;
   height: 35px;
   margin-top: 10px;
-  margin-left: 4%;
+  margin-left: 2%;
 }
-
 /* /////////////////////container//////////////////// */
 #jewellery_container {
   width: 95%;
-  margin: auto;
-  height: fit-content;
   background: transparent;
   display: grid;
   grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 450px;
+  margin: auto;
   gap: 0.6%;
   padding: 2%;
-}
-#jewellery_container p {
-  font-weight: lighter;
+  padding-bottom: 0%;
 }
 .divmain {
-  width: 95%;
+  width: 96%;
   position: relative;
+  /* padding: 2%; */
   /* height: 450px; */
-  padding: 2%;
+  height: 95%;
   margin-top: 2%;
-
+  font-size: 17px;
   background: transparent;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-#jewellery_container div img {
+.BS_img_div {
+  height: 60%;
   width: 100%;
-  height: 65%;
 }
-.divmain {
-  transform: scale(1);
+.BS_img_div>img {
+  width: 100%;
+  height: 100%;
 }
 .divmain:hover {
-  transform: scale(1.03);
+  transform: scale(1.01,1.01);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .mrp_div {
   display: flex;
+  font-size: 19px;
   width: 100%;
-  /* top: -40px; */
   justify-content: space-between;
 }
 
-.mrp_div>p:nth-child(2) {
+.mrp_div p:nth-child(2) {
   color: red;
-  font-size: 21px;
+  margin-top: 3%;
+  
   margin-right: 4%;
 }
 
-.mrp_div>p:nth-child(1) {
+.mrp_div p:nth-child(1) {
   color: #878787;
+  margin-top: 3%;
+  margin-left: 2%;
 }
 .main_titleDiv {
   display: flex;
   width: 100%;
-  margin: auto;
-  height:38px;
+  height: 40px;
   overflow: hidden;
+  margin-top: 9px;
   justify-content: space-between;
 }
-.main_titleDiv>div:nth-child(1) {
+.main_titleDiv div:nth-child(1) {
   background: transparent;
   position: relative;
   flex: 9;
   box-shadow: none;
+  margin-left: 2%;
 }
 .main_titleDiv div:hover {
   color: red;
@@ -224,7 +208,8 @@ body {
 }
 .star_div {
   width: 100%;
-  margin: auto;
+  margin-left: 2%;
+  color: red;
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -236,18 +221,4 @@ body {
   position: relative;
   top: 140px;
   line-height: 22px;
-}
-p:nth-child(2) {
-  font-size: 14px;
-}
-p:nth-child(3) {
-  font-size: 18px;
-}
-p:nth-child(4) {
-  font-size: 18px;
-}
-.Bs_mrp_div {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
 }

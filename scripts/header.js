@@ -259,6 +259,7 @@ async function navbar_responsive(){
     document.querySelector('#search_btn').addEventListener('click',()=>{
       product = search_item.value;
         getDataFromDataBase(get_url, product);
+        
     })
     var id;
     function debounce(func, delay) {
@@ -305,7 +306,6 @@ async function navbar_responsive(){
       location.style.display = "block";
       location.innerHTML = null;
       let arr = [];
-  
       data.map(({ category, sub_category, price, image, id, product }) => {
         let cat = "";
         let sub = "";
@@ -323,6 +323,7 @@ async function navbar_responsive(){
         }
       });
       arr = arr.reverse();
+      localStorage.setItem('search_items_array',JSON.stringify(arr));
       arr.map(({ image, price, product,sub_category,category }) => {
         let div = document.createElement("div");
         let img = document.createElement("img");

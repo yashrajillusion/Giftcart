@@ -1050,6 +1050,11 @@
 
     let cart_count = document.getElementById('cart_cc');
     cart_count.textContent = `${getcart.length}`;
+
+    let clickdiv = document.querySelector('.material-icons-outlined');
+    clickdiv.addEventListener('click',()=>{
+        window.location.href = './random.html'
+    })
 </script>
 
 
