@@ -527,12 +527,13 @@ async function navbar_part(){
             width="160px"
             height="34x"
           />
+          <a href="http://localhost:4545/auth/google">
           <img
             id="google_logo"
             src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button.png"
             alt=""
             width="160px"
-          />
+          /></a>
         </div>
       </div>
     </div>
