@@ -81,7 +81,7 @@
 
                     <!-- hidden div which will appper and disapper on click -->
                 </div>
-                <div id="sam_cartItem_retated" class="common"><div id="sam_item_count"><div id="sam_subtracting_count" class="curser">-</div><div id="sam_display_value_count"></div><div id="sam_adding_count" class="curser">+</div></div><div id="sam_add_to_cart" class="common curser">ADD TO CART</div><div class="curser color" id="sam_add_to_cart">BUY NOW</div></div>
+                <div id="sam_cartItem_retated" class="common"><div id="sam_item_count"><div id="sam_subtracting_count" class="curser">-</div><div id="sam_display_value_count"></div><div id="sam_adding_count" class="curser">+</div></div><div id="sam_add_to_cart" class="common curser">ADD TO CART</div><div class="curser color bhaveshHere" id="sam_add_to_cart">BUY NOW</div></div>
                 <div id="sam_wishlist">
                     <!-- <div id="sam_heart">
                         <div class="sam_heart_rigth sam_heart" id="sam_heart_common">.</div>
@@ -156,4 +156,21 @@ import navbar_responsive from "./scripts/header.js";
 <script type="module">
     import footer from "./components/footer.js"
         document.getElementById("sam_footer").innerHTML=footer();
+</script>
+<script>
+    var arr2 = JSON.parse(localStorage.getItem('productlist')) || [];
+    let obj_data_get_from_sumit2= JSON.parse(localStorage.getItem("clickedJewelleryData")) //data transfer by sumit kartik page;
+    let valuedd = document.querySelector('.bhaveshHere');
+    valuedd.addEventListener('click', function(){
+        let object= {
+        image:obj_data_get_from_sumit2.image,
+        product:obj_data_get_from_sumit2.product,
+        price:Number(obj_data_get_from_sumit2.price),
+        product_count: Number(obj_data_get_from_sumit2.price)
+        }
+        
+        arr2.push(object)
+        localStorage.setItem("productlist",JSON.stringify(arr2))
+        window.location.href = './cart.html'
+    })
 </script>

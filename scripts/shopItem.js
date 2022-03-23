@@ -15,7 +15,6 @@ document.getElementById("Sam_home_link").addEventListener("click",function ()
 //>>>>>>>>> click on product cateogy <<<<<<// lines 15 to 28
 document.getElementById("Sam_category_page").addEventListener("click",function (){
     let cat =document.getElementById("Sam_category_page").innerHTML;
-    console.log(cat)
     if( cat =='<i>/ jewellery</i>')
     {
         window.location.href="/jewellery.html"
@@ -413,6 +412,7 @@ var arr = JSON.parse(localStorage.getItem('productlist')) || []; //by bhavesh  t
     arr.push(obj_transfer_to_bhavesh)
 
     localStorage.setItem("productlist",JSON.stringify(arr))
+    alert('Item Added Successfully!!')
     //>>>>>>> var arr = JSON.parse(localStorage.getItem('productlist')) || []; // storage define in bhavesh page <<<<<<<<<<<//
     })
 }
