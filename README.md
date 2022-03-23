@@ -71,3 +71,26 @@ https://drive.google.com/file/d/1xOv61CoWKLK7XWXwm8u08UT3kpoaHTnn/view?usp=shari
 - masai authentication for signin/signup
 
 
+#ScreenShots
+- Home page
+  <img src="https://drive.google.com/uc?export=view&id=1MZTHotmlqZyoGjQQbS9FOOnRKdA-ou7z" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
+- Signin page
+  <img src="https://drive.google.com/uc?export=view&id=1qLR868cjEPZLHkT_6PpICEzh_kM2eEla" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
+- Signup page
+  <img src="https://drive.google.com/uc?export=view&id=1AoXJAOun5HL4it6Nwyw2tZTjcp8vlUHo" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
+- Product page
+    <img src="https://drive.google.com/uc?export=view&id=1YwUTtq_YXrD7fFCySTu_4m7pX6eeB4Kq" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+    <p>
+- Single product page
+</p>
+  <img src="https://drive.google.com/uc?export=view&id=1xL9omADJASqu5M5L82FAYbXTnXPqsYC1" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+    
+- Cart page
+  <img src="https://drive.google.com/uc?export=view&id=1o50nuIid1II5uVYUEzp6BvJbNHkc-Pou" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+  
+- Payment page
+  <img src="https://drive.google.com/uc?export=view&id=1wpu78rkEwajG_vlQOT7EjJjSf8bDZdeF" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
