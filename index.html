@@ -39,4 +39,41 @@
   // navbar logic are imported here
   import navbar_responsive from "./scripts/header.js";
   await navbar_responsive();
+<<<<<<< Updated upstream
+=======
+  import footer from "./components/footer.js";
+    let footerDiv=document.getElementById("footer");
+    footerDiv.innerHTML=footer();
+    
+</script>
+
+
+    
+
+<script>
+
+var container = document.querySelector(".container");
+var image = [
+"https://style.giftcart.com/pub/media/allbanners/New_Year_2022.png",
+'https://style.giftcart.com/pub/media/allbanners/valentine-2.jpg',
+'https://style.giftcart.com/pub/media/allbanners/Roses.jpg',
+'https://style.giftcart.com/pub/media/allbanners/Hatke_Gifts.jpg',
+'https://style.giftcart.com/pub/media/allbanners/Birthday-1.jpg'
+]
+var index=0;
+function forward(){
+index++;
+if(index > image.length-1){
+  index=0;
+}
+container.style.backgroundImage = `url(${image[index]})`;
+}
+function backward(){
+index--;
+if(index < 0){
+  index = image.length - 1;
+}
+container.style.backgroundImage = `url(${image[index]})`;
+}
+>>>>>>> Stashed changes
 </script>

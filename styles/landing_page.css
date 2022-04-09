@@ -677,3 +677,29 @@ body {
 .stickers img {
   height: 100%;
 }
+<<<<<<< Updated upstream
+=======
+#search_result_div {
+  border: 2px solid rgb(187, 184, 184);
+  width: 616px;
+  height: auto;
+  position: absolute;
+  background-color: white;
+  display: none;
+}
+#search_result_div > div {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  font-family: "Lato", arial, tahoma;
+  font-weight: normal;
+  width: 600px;
+  border-bottom: 2px solid rgb(198, 197, 197);
+  margin: auto;
+  margin-top: 10px;
+}
+#search_result_div img {
+  width: 100px;
+  cursor: pointer;
+}
+>>>>>>> Stashed changes
